@@ -1,0 +1,50 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.compare-connect-alert {
+  background: $primary;
+  border-bottom: 1.5px solid black;
+
+  .compare-connect-alert-container {
+    display: flex;
+    justify-content: space-between;
+    background: $primary;
+    width: 100%;
+    padding: 0 40px !important;
+    position: relative;
+    align-items: center;
+    min-height: 50px;
+    z-index: 1;
+
+    @include media-down(tablet) {
+      padding: 0 10px !important;
+    }
+  }
+
+  .wrapper {
+    align-items: center;
+    padding: 18px 30px;
+    max-width: 1400px;
+  }
+
+  .user-wrapper {
+    margin: auto;
+    max-width: 1400px;
+    display: flex;
+
+    @include media-down(large-mobile) {
+      padding: 18px 20px;
+    }
+
+    @include media-down(small-desktop) {
+      padding: 0;
+      display: block;
+      flex-direction: column;
+    }
+  }
+
+  .mw-100 {
+    max-width: 100%;
+  }
+}

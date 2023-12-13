@@ -1,0 +1,28 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.document-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.document-footer__right {
+  text-align: right;
+}
+
+.document-footer__right > * {
+  margin-bottom: 10px;
+  margin-left: 10px;
+  white-space: nowrap;
+}
+
+.document-footer__left {
+  text-align: left;
+}
+
+.document-footer__left > * {
+  margin-bottom: 10px;
+  margin-right: 10px;
+  white-space: nowrap;
+}

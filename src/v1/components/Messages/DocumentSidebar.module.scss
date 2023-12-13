@@ -1,0 +1,42 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.document-content {
+  .download-button {
+    text-transform: none;
+    padding: 2px 15px;
+    border-radius: 8px;
+  }
+
+  .organisation-logo-container {
+    margin: 10px 0 0 10px;
+  }
+
+  .sidebar-building-info {
+    .building-info-text-container {
+      display: flex;
+
+      .building-info-text {
+        margin-right: 10px;
+
+        &:before {
+          content: '•';
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+  .sidebar-building-category {
+    .sidebar-category-items {
+      margin: 5px 0;
+    }
+  }
+
+  .icon-download {
+    border: none;
+    background-color: inherit;
+    font-size: 16px;
+  }
+}

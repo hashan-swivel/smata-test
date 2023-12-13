@@ -1,0 +1,88 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.document-results {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  padding: 8px 20px;
+  font-size: 14px;
+
+  .document-number-date {
+    display: flex;
+    color: #A5A5A5;
+
+    .document-number {
+      margin-right: 10px;
+    }
+  }
+
+  li {
+    cursor: default;
+  }
+
+  &:hover {
+    background-color: #FBFBFB;
+    color: $black;
+  }
+}
+
+.image-search-results {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  padding: 8px 20px;
+  font-size: 14px;
+  align-items: center;
+
+  .image-search-display {
+    height: 75px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 3px;
+  }
+
+  .image-search-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+
+    .image-search-date {
+      color: #A5A5A5;
+    }
+  }
+
+  &:hover {
+    background-color: #FBFBFB;
+    color: $black;
+  }
+}
+
+.display-result {
+  display: inline-block;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+
+  &.result-container {
+    padding: 5px 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    background-color: #EAEDF0;
+
+    .result-name {
+      padding: 0 5px;
+    }
+
+    .result-plus {
+      font-size: 18px;
+    }
+
+    span {
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.file-upload-top {
+  grid-column: 1/4;
+  display: grid;
+  grid-template-columns: 55px auto 30px;
+
+  .file-type-icon {
+    grid-column: 1/2;
+    width: 35px;
+    height: 45px;
+    margin: 5px auto auto auto;
+  }
+
+  .uploaded-top-details {
+    display: flex;
+    flex-direction: column;
+    grid-column: 2/3;
+
+    .file-name {
+      margin: 0;
+      font-weight: bold;
+    }
+
+    .file-size {
+      color: #8697a8;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .delete-cross {
+    background: none;
+    border-style: none;
+    align-items: start;
+
+    &:before {
+      height: 12px;
+      width: 12px;
+      background-color: #44566c;
+      border: 3px solid #44566c;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
+}

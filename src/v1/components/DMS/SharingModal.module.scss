@@ -1,0 +1,47 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.sharing-modal-container {
+  padding: 30px;
+
+  .sharing-modal {
+    .checkboxes-field {
+      &.inactive {
+        .options {
+          .option {
+            label {
+              &:before {
+                background-color: #F2F2F2;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .everyone-checkbox, .tenant-checkbox {
+      grid-column: 1 / 2;
+    }
+
+    .agent-checkbox, .owner-checkbox {
+      // grid-column: 2 / 3;
+    }
+
+  }
+
+  .button-container {
+    margin-top: 19px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .react-select__menu {
+    z-index: 1001;
+    max-height: 145px;
+
+    .react-select__menu-list {
+      max-height: 140px;
+    }
+  }
+}

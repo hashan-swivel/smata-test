@@ -1,0 +1,115 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+// sass-lint:disable-all
+
+$border-color: #E0E0E0;
+$focus-border-color: $primary;
+
+.react-select__control {
+  border: 1px solid $border-color!important;
+  box-shadow: 0 1px 1px rgba($border-color, 0.3)!important;
+  background: $white!important;
+  margin-bottom: 0;
+
+  &.react-select__control--is-focused {
+    border-color: $focus-border-color!important;
+    outline: none;
+  }
+
+  .react-select__input {
+    .input {
+      box-shadow: none!important;
+      height: 30px!important;
+      line-height: 1.5em!important;
+      margin: 0!important;
+    }
+  }
+}
+
+.react-select__option {
+  padding: 3px 10px;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: #EEE 1px solid;
+  cursor: pointer;
+  font-size: 14px!important;
+  line-height: 1.4em!important;
+
+  &.disabled {
+    background-color: $disabled;
+  }
+
+  &.react-select__option--is-focused,  &.react-select__option--is-selected {
+    background: $off-white;
+    color: $textcolor;
+  }
+
+  &:active {
+    background-color: $off-white!important;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .avatar {
+    margin: 0 8px 0 0;
+  }
+}
+
+.react-select-avatar-name {
+  // width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.react-select-approved {
+  width: 20px;
+  height: 20px;
+  background: url('../../../../images/icons/check-dark.svg') no-repeat center;
+}
+
+.react-select-user-role {
+  margin-left: auto;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+
+.react-select__menu {
+  z-index: 99999999!important;
+  min-width: 200px;
+}
+
+.react-select__menu-list {
+  padding: 0!important;
+}
+
+.react-select__multi-value {
+  background: $off-white!important;
+}
+
+.react-select__placeholder {
+  // color: $off-white!important;
+}
+
+.react-select-user-label {
+  display: flex;
+  align-items: center;
+  .avatar {
+    margin: 0 5px 0 3px;
+  }
+}
+
+.react-select--is-disabled {
+  .react-select__control--is-disabled {
+    background-color: #F2F2F2!important;
+
+    // .react-select__placeholder {
+    //   color: $error;
+    // }
+  }
+}

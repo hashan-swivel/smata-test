@@ -1,0 +1,157 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.message-item {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+
+  .avatar {
+    padding: 0 10px;
+  }
+
+  &:hover {
+    .message-item-meta-container > .message-item-meta > .message-item-actions {
+      visibility: visible;
+    }
+  }
+
+  .message-body {
+    min-width: 50px;
+    max-width: 70%;
+
+    @include media-down(small-mobile) {
+      max-width: 200px;
+    }
+
+    @include media-down(mobile) {
+      max-width: 250px;
+    }
+
+    .message-container {
+      display: flex;
+      flex-direction: column;
+      border-radius: 7px;
+      padding: 9px 17px;
+      background-color: #EEE;
+      font-size: 15px;
+      line-height: 1.55em;
+
+      .mention {
+        color: #0d47a1;
+      }
+
+      .multiple-images-case {
+        margin-bottom: 5px;
+      }
+
+      .file-download {
+        display: inline-flex;
+        margin-right: 10px;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+          height: 50px;
+          width: 60px;
+        }
+
+        .file-type-icon {
+          margin-right: 3px;
+        }
+      }
+    }
+
+  }
+
+  h6 {
+    color: #979797;
+    padding-left: 15px;
+    margin: 0 0 5px;
+    font-size: 15px;
+  }
+
+  &.current-user {
+    flex-direction: row-reverse;
+    margin-right: 10px;
+
+    .avatar {
+      padding-top: 0;
+    }
+
+    h6 {
+      display: none;
+    }
+
+    .message-body {
+      .message-container {
+        background-color: $highlight;
+        cursor: pointer;
+
+        .file-download {
+          a {
+            color: $white;
+            padding-left: 5px;
+          }
+        }
+        .paragraph-message {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  &.group-same-owner {
+    margin-top: -10px;
+
+    .avatar {
+      visibility: hidden;
+    }
+
+    h6 {
+      display: none;
+    }
+  }
+
+  .message-item-meta-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .message-item-meta {
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  .message-item-date {
+    margin: 0 10px;
+    color: rgba($textcolor, 0.3);
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  .message-item-actions {
+    float: right;
+    padding: 5px 10px 0;
+    visibility: hidden;
+
+    .message-item-delete {
+      font-size: 15.5px;
+      margin-left: 10px;
+    }
+
+    .message-item-delete, .message-item-edit {
+      cursor: pointer;
+
+      &:hover {
+        color: $error;
+      }
+    }
+
+    &:hover {
+      visibility: visible;
+    }
+  }
+}

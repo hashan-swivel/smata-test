@@ -1,0 +1,43 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.bulk-actions-bar {
+  width: 100%;
+  padding: 15px 20px;
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bulk-actions-bar--left,.bulk-actions-bar--right {
+  display: flex;
+  align-items: center;
+}
+
+.bulk-actions-bar__clear-button {
+  background: none;
+  border: none;
+  margin-right: 30px;
+  padding: 0;
+  display: flex;
+}
+
+.bulk-actions-bar--right > .dropdown-wrapper > .label {
+  border-color: $border;
+}
+
+.bulk-actions-button {
+  font-size: inherit;
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+  padding: 5px;
+  text-decoration: none;
+  border-radius: 4px;
+  background: $white;
+  color: $black;
+  border: 1px solid $border;
+}

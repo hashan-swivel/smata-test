@@ -1,0 +1,104 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.creditor-items-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px 10px;
+  //@include media-down(small-tablet) {
+  //  grid-template-columns: 1fr 1fr;
+  //}
+
+  .creditor-left {
+    display: block;
+    grid-column: 1 / span 2;
+  }
+
+  .creditor-right {
+    display: block;
+    grid-column: 3 / span 2;
+  }
+
+  .creditor-hidden {
+    display: none;
+    grid-column: 1 / span 4;
+  }
+}
+
+.invoice-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+
+  .invoice-field-info {
+    display: flex;
+    flex-direction: column;
+
+    .invoice-field-title {
+      font-weight: bold;
+    }
+  }
+}
+
+.creditor-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+
+  .form__group {
+    margin-bottom: 0;
+  }
+}
+
+.compliance-status {
+  display: inline-block;
+  padding: .25em .4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25rem;
+
+  &.licence-status, &.insurance-status {
+    color: #fff;
+    background-color: #6c757d;
+    margin-right: 5px;
+  }
+
+  &.licence-status--approved, &.insurance-status--approved,
+  &.licence-status--valid, &.insurance-status--valid {
+    color: #fff;
+    background-color: #28a745;
+  }
+
+  &.licence-status--pending_verification, &.licence-status--pending_approval,
+  &.insurance-status--pending_verification, &.insurance-status--pending_approval {
+    color: #212529;
+    background-color: #ffc107;
+  }
+
+  &.licence-status--rejected, &.insurance-status--rejected,
+  &.licence-status--invalid, &.insurance-status--invalid,
+  &.licence-status--expired, &.insurance-status--expired {
+    color: #fff;
+    background-color: #dc3545;
+  }
+
+  &.licence-status--not_required {
+    color: #fff;
+    background-color: #4A90E2;
+  }
+
+  &.strata-master-status {
+    color: #fff;
+    background-color: #dc3545;
+  }
+
+  &.strata-master-status--compliant, &.strata-master-status--restricted, &.strata-master-status--exempt {
+    color: #fff;
+    background-color: #4A90E2;
+  }
+}

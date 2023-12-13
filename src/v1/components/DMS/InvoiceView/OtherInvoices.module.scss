@@ -1,0 +1,34 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.action-view-block {
+  display: flex;
+  background-color: $white;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+
+  span {
+    font-size: 14px;
+    margin: 5px 0 5px 15px;
+    display: flex;
+
+    @include media-down(small-desktop) {
+      line-height: 1.2em;
+    }
+
+    &:before {
+      margin: 0 10px;
+      align-self: center;
+    }
+  }
+
+  .next-button {
+    text-transform: none;
+    margin: 5px 15px 5px 0;
+    padding: 5px 20px;
+    line-height: 1em;
+  }
+}

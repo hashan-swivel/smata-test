@@ -1,0 +1,13 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.edit-file {
+  .button-container {
+    margin-top: 10px;
+    float: right;
+    button.primary {
+      margin-left: 10px;
+    }
+  }
+}

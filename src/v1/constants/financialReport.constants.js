@@ -1,0 +1,4 @@
+export const financialReportConstants = {
+  GET_TYPES: 'GET_FINANCIAL_REPORT_TYPES',
+  GET_LOT_NUMBERS: 'GET_FINANCIAL_REPORT_LOT_NUMBERS'
+};

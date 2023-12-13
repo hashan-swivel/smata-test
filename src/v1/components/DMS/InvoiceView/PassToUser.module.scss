@@ -1,0 +1,102 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.pass-to-user-container {
+  min-height: 460px;
+  padding: 0 15px 15px 15px;
+
+  .pass-to-user-title {
+    margin-bottom: 30px;
+  }
+
+  .pass-to-user-form {
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .pass-user-fields-container {
+      .fields {
+        .field {
+          .exclude-users-field {
+            margin-bottom: 30px;
+          }
+        }
+      }
+
+      .note-field {
+        margin: 20px 0;
+      }
+
+      .warning-message-container {
+        margin-bottom: 30px;
+
+        .exclude-warning-text {
+          &.active {
+            color: $error;
+          }
+
+          &.inactive {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .pass-to-user-button {
+      width: 100%;
+      margin-bottom: 10px;
+      background-color: $primary;
+      border: $primary;
+
+      &:hover {
+        background-color: $black;
+        color: $white;
+      }
+    }
+
+    .pass-to-user-button-next-invoice {
+      width: 100%;
+      background-color: $primary-darker;
+      border: $primary-darker;
+
+      &:hover {
+        background-color: $black;
+        color: $white;
+      }
+    }
+
+    .override-approve-button {
+      margin-top: 20px;
+      width: 100%;
+      background-color: $error;
+      border: $error;
+
+      &:hover {
+        background-color: $black;
+        color: $white;
+      }
+    }
+  }
+}
+
+.override-container {
+  min-height: 200px;
+  padding: 0 15px 15px 15px;
+
+  .override-title {
+    margin-bottom: 20px;
+  }
+
+  .override-approve-button {
+    margin-top: 20px;
+    width: 100%;
+    background-color: $error;
+    border: $error;
+
+    &:hover {
+      background-color: darken($error, 15%);
+    }
+  }
+}

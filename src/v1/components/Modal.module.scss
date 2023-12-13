@@ -1,0 +1,259 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+/*=============================================>>>>>
+= Modal Helper =
+===============================================>>>>>*/
+
+// Prevent background scroll when modal open
+.modal-open {
+  overflow: hidden;
+  }
+
+// Modal Styling
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  height: 100vh;
+  width: 100%;
+  background: rgba($black, 0.4);
+  padding: 5% 20px;
+  @include media-down(small-mobile) {
+    padding: 5% 15px;
+  }
+
+  .modal-content {
+    padding: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 40px);
+    max-width: 700px;
+    max-height: 90%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    background: $white;
+    border-radius: 3px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+
+    @include media-up(giant) {
+      width: 600px;
+    }
+
+    @include media-down(small-mobile) {
+      width: calc(100% - 30px);
+    }
+
+    &.custom-title {
+      padding: 0;
+    }
+
+    .modal-title-close {
+
+      &.title {
+        display: flex;
+        justify-content: space-between;
+        background-color: $black;
+        padding: 15px 30px;
+      }
+
+      .modal-title {
+        color: $white;
+      }
+
+      .a {
+        width: 30px;
+        align-self: flex-end;
+      }
+
+      .modal-cross-close {
+        display: flex;
+        flex-direction: row-reverse;
+
+        &.custom-title {
+          &:before {
+            height: 18px;
+            width: 18px;
+            border-radius: 50%;
+            background-color: $black;
+            border-color: $black;
+          }
+        }
+
+        &:before {
+          height: 18px;
+          width: 18px;
+          background-color: $disabled;
+          border: 6px solid $disabled;
+          border-radius: 50%;
+          box-sizing: unset;
+        }
+      }
+    }
+  }
+
+  &.full-screen {
+    .modal-content {
+      width: 95vw;
+      height: 95vh;
+      max-height: 95vh;
+    }
+  }
+
+  &.iframe-modal {
+    .modal-content {
+      .iframe-container {
+        height: 100%;
+        width: 100%;
+        position: relative;
+      }
+
+      .loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      iframe {
+        position: relative;
+        z-index: 9;
+      }
+    }
+  }
+
+  .modal-content-title {
+    background: $primary;
+    color: $white;
+    padding: 0 20px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: $off-white 1px solid;
+
+    h3 {
+      font-size: 18px;
+    }
+
+    .close {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .modal-content-body {
+    display: flex;
+    flex: 1;
+    align-items: flex-start;
+    background: $off-white;
+    padding: 20px;
+
+    .fields {
+      .field-heading {
+        &:first-child {
+          border-top: 0;
+        }
+      }
+
+      .react-select-field {
+        padding-bottom: 10px;
+      }
+
+      .checkboxes-field {
+        padding-bottom: 15px;
+      }
+    }
+
+    .button {
+      width: 100%;
+      padding: 12px 20px;
+      font-size: 15px;
+    }
+  }
+
+  .modal-content-list {
+    padding: 10px 0 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .modal-content-list-item {
+    padding: 10px 15px;
+    width: 100%;
+
+    &.timestamp {
+      border-top: $off-white 1px solid;
+      padding-top: 20px;
+      margin: 10px 0 0;
+    }
+
+    small {
+      flex: 1;
+      font-size: 11px;
+      color: darken($off-white, 20%);
+    }
+
+    &.split {
+      width: 50%;
+    }
+  }
+
+  .modal-content-list-item-title {
+    color: darken($off-white, 30%);
+    margin: 0 0 4px;
+    min-width: 100%;
+  }
+
+  .modal-content-list-item-content {
+    display: flex;
+    font-size: 15px;
+
+    input, .fill-row {
+      flex: 1;
+      line-height: 1em;
+      @include ellipsis();
+    }
+
+    .tags-list {
+      padding-top: 2px;
+
+      .tag {
+        margin: 4px 8px 0 0;
+      }
+    }
+  }
+
+  .model-content-list-item-sublist {
+    a {
+      width: 100%;
+      padding: 5px 0;
+      display: block;
+    }
+  }
+
+  .modal-footer-actions {
+    display: flex;
+    justify-content: space-between;
+
+    .button {
+      width: auto;
+      min-width: 110px;
+    }
+  }
+
+  .loader {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+  }
+}

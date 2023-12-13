@@ -1,0 +1,26 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.button-container > .download-btn {
+  background-color: $tertiary;
+}
+
+.button-container > p {
+  text-align: center;
+  color: $error;
+}
+
+p.error {
+  color: $error;
+}
+
+.fields.financial-year-period-fields {
+  margin-top: 10px;
+}
+
+label[for="financialYearPeriod"] {
+  span.color-blue{
+    color: $tertiary;
+  }
+}

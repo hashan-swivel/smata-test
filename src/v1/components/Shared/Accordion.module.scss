@@ -1,0 +1,78 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+$accordion-color: $body-color;
+$accordion-bg: $body-bg;
+$accordion-transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out,border-radius 0.15s ease;
+$accordion-border-color: $border-color;
+$accordion-border-width: $border-width;
+$accordion-border-radius: $border-radius;
+$accordion-inner-border-radius: calc(#{$border-radius} - #{$border-width});
+$accordion-btn-padding-x: 1rem;
+$accordion-btn-padding-y: .75rem;
+$accordion-btn-color: $body-color;
+$accordion-btn-bg: $accordion-bg;
+$accordion-btn-icon-width: 1.25rem;
+$accordion-btn-icon-transform: rotate(-180deg);
+$accordion-btn-icon-transition: transform 0.2s ease-in-out;
+$accordion-btn-focus-border-color: #86b7fe;
+$accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+$accordion-body-padding-x: 1rem;
+$accordion-body-padding-y: .75rem;
+$accordion-active-color: $white;
+$accordion-active-bg: $off-black;
+$accordion-font-size: $font-size;
+
+.accordion {
+  border-top-left-radius: $accordion-border-radius;
+  border-top-right-radius: $accordion-border-radius;
+  color: $accordion-color;
+  background-color: $accordion-bg;
+  border: $accordion-border-width solid $accordion-border-color;
+}
+
+.accordion__button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: $accordion-btn-padding-y $accordion-btn-padding-x;
+  font-size: $accordion-font-size;
+  color: $accordion-btn-color;
+  text-align: left;
+  background-color: $accordion-btn-bg;
+  border: 0;
+  border-radius: 0;
+  overflow-anchor: none;
+  transition: $accordion-transition;
+
+  @include media-down(small-tablet){
+    font-size: inherit;
+  }
+}
+
+.accordions .accordion:first-of-type .accordion__button {
+  border-top-left-radius: $accordion-inner-border-radius;
+  border-top-right-radius: $accordion-inner-border-radius;
+}
+
+.accordion__button:not(.collapsed) {
+  color: $accordion-active-color;
+  background-color: $accordion-active-bg;
+  box-shadow: inset 0 calc(-1 * #{$accordion-border-width}) 0 #{$accordion-border-color};
+}
+
+.accordion__body {
+  padding: #{$accordion-body-padding-y} #{$accordion-body-padding-x};
+  font-size: $accordion-font-size;
+
+  @include media-down(small-tablet){
+    font-size: inherit;
+  }
+}
+
+.accordion__collapse:not(.show) {
+  display: none;
+}

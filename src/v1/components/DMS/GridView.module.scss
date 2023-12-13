@@ -1,0 +1,39 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.document-list-items {
+  .dms-pdf-gridview {
+    .react-pdf__Page {
+      width: 100% !important;
+      height: 150px !important;
+      overflow: hidden !important;
+
+      .react-pdf__Page__canvas {
+        width: 100% !important;
+        height: auto !important;
+      }
+    }
+  }
+
+  &.dms-grid-view {
+    flex: none;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    padding: 20px 0;
+
+    @include media-down(large-tablet) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include media-down(small-tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media-down(large-mobile) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

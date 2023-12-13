@@ -1,0 +1,41 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.shared-with-field {
+  .everyone-checkbox, .tenant-checkbox {
+    grid-column: 1 / 2;
+  }
+
+  .agent-checkbox, .owner-checkbox {
+    // grid-column: 2 / 3;
+  }
+}
+
+.additional-inputs.add-to-inputs {
+  margin-top: 10px;
+}
+
+.view-building-rules-button {
+  color: black;
+  background-color: transparent;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

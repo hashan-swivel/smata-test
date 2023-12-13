@@ -1,0 +1,66 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.pdf-embedded-view-wrapper {
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  canvas.react-pdf__Page__canvas {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+.pdf-embedded-view-header {
+  padding: 10px 20px;
+  width: 100%;
+  background-color: $secondary;
+  color: $off-white;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.pdf-embedded-view-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 15px;
+
+  button.pdf-embedded-view-pagination--next,button.pdf-embedded-view-pagination--previous {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    color: $off-white;
+
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+}
+
+.pdf-embedded-view-tools {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+  .pdf-embedded-view-tools--rotate,
+  .pdf-embedded-view-tools--fullscreen,
+  .pdf-embedded-view-tools--zoom-in,
+  .pdf-embedded-view-tools--zoom-out {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    color: $off-white;
+
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.breadcrumbs {
+  display: flex;
+
+  .breadcrumb {
+    color: rgba($textcolor, 0.6);
+    padding: 0 8px 0 0;
+  }
+
+  span.breadcrumb {
+    word-break: break-word;
+  }
+
+  a.breadcrumb {
+    span {
+      text-decoration: underline;
+      color: $textcolor;
+    }
+
+    &:after {
+      content: '/';
+      padding-left: 8px;
+      text-decoration: none;
+    }
+
+    &:hover {
+      text-decoration: none;
+
+    }
+  }
+}

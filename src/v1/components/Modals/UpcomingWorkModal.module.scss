@@ -1,0 +1,59 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.upcoming-work-item {
+  border: 1.5px solid #DFDFDF;
+  margin: 15px 0;
+  padding: 15px;
+  position: relative;
+  border-radius: 10px;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  &:hover{
+    background-color: #F8F8F8;
+  }
+
+  .upcoming-work-timestamps {
+    font-size: .75rem;
+  }
+
+  .recurring-rule-range {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  p {
+    margin-bottom: 15px;
+  }
+
+  hr {
+    border: 1.5px solid #DFDFDF;
+    border-radius: 0.75px;
+    margin: 10px 0 15px 0;
+  }
+
+  .upcoming-trade-item {
+    border: .2px solid #DFDFDF;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .upcoming-trade-item:last-of-type {
+    margin-bottom: 5px;
+  }
+
+  .upcoming-trade-item--header {
+    padding: 5px 10px;
+    background-color: black;
+    color: white;
+  }
+
+  .upcoming-trade-item--body {
+    padding: 5px 10px;
+    font-size: .85rem;
+  }
+}

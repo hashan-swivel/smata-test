@@ -1,0 +1,50 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.message-textarea {
+  input[type=text]:focus, textarea:focus {
+    outline: none;
+  }
+}
+
+.write-message-container {
+  .preview-current-files {
+    padding-top: 12px;
+
+    .preview-current-file {
+      display: inline-block;
+      position: relative;
+      padding: 0 12px 12px 12px;
+
+      .preview-attachment-remove-btn {
+        position: absolute;
+        top: -5px;
+        right: 2px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .message-box-action-buttons-wrapper {
+    margin-top: 5px;
+    float: right;
+
+    button {
+      &.message-send-button {
+        padding: 5px 8.5px;
+      }
+
+      &.message-box-attach-file {
+        margin-right: 5px;
+        padding: 5px 10px;
+      }
+
+      &:disabled {
+        background: $secondary;
+        border-color: $secondary;
+        cursor: default;
+      }
+    }
+  }
+}

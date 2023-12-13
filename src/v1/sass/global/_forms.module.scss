@@ -1,0 +1,484 @@
+$focus-border-color: $primary;
+
+@mixin inputStyles() {
+  @include ellipsis();
+  @include body-font();
+  appearance: none;
+  box-sizing: border-box;
+  color: $textcolor;
+  width: 100%;
+  margin: 0;
+  padding: 11.4px;
+  background: $white;
+  border: 1px solid $border-color;
+  box-shadow: 0 1px 1px rgba($border-color, 0.3);
+  border-radius: 4px;
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+  font-size: 16px;
+  // Prevent zoom in on iOS
+  @include media-down(tablet) {
+    font-size: 16px!important;
+    padding: 10px 11px;
+  }
+
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+
+    &:hover, &:focus, &:active {
+      -webkit-box-shadow: 0 0 0 30px white inset;
+    }
+   }
+
+  &[disabled] {
+    border-color: $border-color;
+    background-color: darken($white, 5%);
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+
+  &:focus {
+    border-color: $focus-border-color;
+    outline: none;
+  }
+  @include placeholder() {
+    color: rgba($textcolor, 0.5);
+  };
+}
+
+.textarea {
+  resize: none;
+  @include body-font();
+  appearance: none;
+  box-sizing: border-box;
+  color: $textcolor;
+  width: 100%;
+  margin: 0;
+  padding: 11.4px;
+  background: $white;
+  border: 1px solid $border-color;
+  box-shadow: 0 1px 1px rgba($border-color, 0.3);
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  font-size: 16px;
+  // Prevent zoom in on iOS
+  @include media-down(tablet) {
+    font-size: 16px!important;
+    padding: 10px 11px;
+  }
+
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+
+    &:hover, &:focus, &:active {
+      -webkit-box-shadow: 0 0 0 30px white inset;
+    }
+  }
+
+  &[disabled] {
+    border-color: $border-color;
+    background-color: darken($white, 5%);
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+
+  &:focus {
+    border-color: $focus-border-color;
+    outline: none;
+  }
+  @include placeholder() {
+    color: rgba($textcolor, 0.5);
+  };
+}
+
+.input {
+  @include inputStyles();
+}
+
+.input[type="checkbox"],
+.input[type="radio"] {
+  width: auto;
+  display: inline-block;
+  appearance: checkbox;
+}
+
+.input[type="file"] {
+  resize: none;
+}
+
+.input[type="number"]{
+  &::-webkit-inner-spin-button,
+  ::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+  }
+}
+
+.textarea:not([class*=message-textarea]) {
+  height: 125px;
+  line-height: 1.5em;
+}
+
+.select:not([class*=flatpickr]) {
+  display: block;
+  padding: 14px 10px;
+  max-width: 100%;
+  border-radius: 5px;
+  background-image: url('../../images/icons/chevron-down-dark.svg');
+  background-repeat: no-repeat, repeat;
+  background-position: right 20px top 50%, 0 0;
+  background-size: .65em auto, 100%;
+
+  @include media-down(tablet) {
+    font-size: 16px!important;
+    padding: 10px 11px;
+  }
+
+  &:focus {
+    border-color: $focus-border-color;
+    color: $textcolor;
+    outline: none;
+  }
+
+  &:-ms-expand {
+    display: none;
+  }
+}
+
+.label, .label {
+  display: inline-block;
+  font-weight: bold;
+  margin: 0 0 10px;
+  font-size: 15px;
+
+  &.error {
+    color: $danger;
+  }
+
+  &.checkbox {
+    color: red;
+  }
+  @include media-down(small-tablet){
+    font-size: 14px;
+  }
+  @include media-down(mobile) {
+    font-size: 12px;
+  }
+
+  .label-hint {
+    font-weight: normal;
+  }
+}
+
+.form {
+  .button {
+    margin: 10px 0 0;
+  }
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px 10px;
+  width: 100%;
+}
+
+.field {
+  display: grid;
+  width: 100%;
+  position: relative;
+  grid-column: 1 / span 2;
+  // Handle two columns
+
+  &.split { // Left
+    grid-column: 1 / span 1;
+    @include media-down(mobile) {
+      grid-column: 1 / span 2;
+    }
+
+    &.right-col { // Right
+      grid-column: 2 / span 1;
+      @include media-down(mobile) {
+        grid-column: 1 / span 2;
+      }
+    }
+  }
+
+  &.disabled{
+    .react-phone-number-input{
+      background-color: #f2f2f2;
+
+      .react-phone-number-input__country{
+        display: none;
+      }
+    }
+  }
+
+  .fieldtitle > label {
+    font-weight: bold;
+  }
+
+  &.hidden {
+    display: none;
+  }
+}
+
+.form__group {
+  margin-bottom: 1rem;
+
+  &.hidden {
+    display: none;
+  }
+
+  .form__control > label {
+    font-weight: bold;
+  }
+
+  .form__control > input[type='checkbox'], .form__control > input[type='radio'] {
+    display: none;
+
+    &:checked {
+      &+label {
+        &:before {
+          background: $primary url('../../images/icons/check-white.svg') no-repeat center;
+          background-size: 11px;
+          background-position: 50% 70%;
+          border: 1px solid $focus-border-color;
+        }
+      }
+    }
+  }
+
+  .form__control > label.checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: normal;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 16px;
+      height: 16px;
+      margin: 0 12px 0 0;
+      background-color: $white;
+      border: 1px solid $border-color;
+      border-radius: 2px;
+    }
+
+    &:hover {
+      &:before {
+        border: 1px solid $focus-border-color;
+      }
+    }
+  }
+
+  .checkbox-container {
+    font-weight: normal !important;
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* Create a custom checkbox */
+  .checkbox-container .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    //background-color: #eee;
+    border-radius: 2px;
+    border: 1px solid $border-color;
+  }
+
+  .checkbox-container input[type="checkbox"], .checkbox-container input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  /* On mouse-over, add a grey background color */
+  .checkbox-container:hover input[type="checkbox"] ~ .checkmark, .checkbox-container:hover input[type="radio"] ~ .checkmark {
+    background-color: #eeeeee;
+    border: 1px solid $primary;
+  }
+
+  /* When the checkbox is checked, add a blue background */
+  .checkbox-container input[type="checkbox"]:checked ~ .checkmark, .checkbox-container input[type="radio"]:checked ~ .checkmark {
+    background-color: $primary;
+    border: 1px solid $primary;
+  }
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the checkmark when checked */
+  .checkbox-container input[type="checkbox"]:checked ~ .checkmark:after, .checkbox-container input[type="radio"]:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the checkmark/indicator */
+  .checkbox-container .checkmark:after {
+    left: 6.5px;
+    top: 3.5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+
+.form__group--inline {
+  display: flex;
+}
+
+%chooser-fields {
+  .option {
+    display: block;
+    padding-bottom: 4px;
+
+    .label {
+      cursor: pointer;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      font-weight: 400;
+
+      &:before {
+        content: '';
+        display: block;
+        width: 16px;
+        height: 16px;
+        margin: 0 12px 0 0;
+        background-color: $white;
+        border: 1px solid $border-color;
+        border-radius: 2px;
+      }
+
+      &:hover {
+        &:before {
+          border: 1px solid $focus-border-color;
+        }
+      }
+    }
+
+    .label.inactive {
+      cursor: default;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      font-weight: 400;
+
+      &:before {
+        content: '';
+        display: block;
+        width: 16px;
+        height: 16px;
+        margin: 0 12px 0 0;
+        background-color: $disabled;
+        border: 1px solid $disabled;
+        border-radius: 2px;
+      }
+
+      &:hover {
+        &:before {
+          border: 1px solid $disabled;
+        }
+      }
+    }
+
+    .input {
+      display: none;
+
+      &:checked {
+        &+label {
+          &:before {
+            background: $primary url('../../images/icons/check-white.svg') no-repeat center;
+            background-size: 11px;
+            background-position: 50% 70%;
+            border: 1px solid $focus-border-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.checkboxes-field {
+  @extend %chooser-fields;
+}
+
+.radios-field {
+  @extend %chooser-fields;
+
+  .option label::before {
+    border-radius: 50%;
+  }
+}
+
+.field-heading {
+  border-bottom: $border-color 1px solid;
+  padding: 12px 0;
+}
+
+.react-phone-number-input {
+  @include inputStyles();
+
+  .input, .select {
+    padding: 0;
+    border: none;
+    box-shadow: none;
+  }
+
+  &.react-phone-number-input--focus {
+    border: 1px solid $focus-border-color;
+  }
+
+  .react-phone-number-input__icon {
+    margin-top: -7px;
+  }
+}
+
+.form {
+  &.form--inline {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    column-gap: 1rem;
+
+    .form__control {
+      display: inline-block;
+      width: auto;
+      vertical-align: middle;
+      margin: 0;
+    }
+  }
+}
+
+.invalid-feedback {
+  margin-top: 0.25rem;
+  color: $error;
+}
+
+.textarea.custom-height {
+  height: 75px;
+}

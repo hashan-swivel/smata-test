@@ -1,0 +1,188 @@
+@import '@/sass/global/styles.module.scss';
+@import '@/sass/modules/react-tippy.module.scss';
+
+@import '@/components/v1/BuildingInspectionSession/InspectionSessions.module.scss';
+
+@import '@/components/v1/BuildingProfile/ContactDetailsModal.module.scss';
+@import '@/components/v1/BuildingProfile/ImageModal.module.scss';
+@import '@/components/v1/BuildingProfile/IndustryNews.module.scss';
+@import '@/components/v1/BuildingProfile/JobFilters.module.scss';
+@import '@/components/v1/BuildingProfile/MeetingSection.module.scss';
+@import '@/components/v1/BuildingProfile/Noticeboard.module.scss';
+@import '@/components/v1/BuildingProfile/NoticeboardModal.module.scss';
+@import '@/components/v1/BuildingProfile/PopularDocuments.module.scss';
+@import '@/components/v1/BuildingProfile/RecentWorkModal.module.scss';
+@import '@/components/v1/BuildingProfile/SingleJobView.module.scss';
+@import '@/components/v1/BuildingProfile/UpcomingWork.module.scss';
+@import '@/components/v1/BuildingProfile/UpcomingWorkJob.module.scss';
+@import '@/components/v1/BuildingProfile/WhatsNearby.module.scss';
+@import '@/components/v1/BuildingProfile/WorkHistory.module.scss';
+@import '@/components/v1/BuildingProfile/Header/Action.module.scss';
+@import '@/components/v1/BuildingProfile/Header/BuildingInfo.module.scss';
+@import '@/components/v1/BuildingProfile/Header/BuildingPhotoFooter.module.scss';
+@import '@/components/v1/BuildingProfile/Header/BuildingPhotoUpload.module.scss';
+@import '@/components/v1/BuildingProfile/Header/LeftGrid.module.scss';
+@import '@/components/v1/BuildingProfile/Header/MainContacts.module.scss';
+@import '@/components/v1/BuildingProfile/Header/ProfileHeader.module.scss';
+@import '@/components/v1/BuildingProfile/Header/RatingModal.module.scss';
+@import '@/components/v1/BuildingProfile/Header/RightGrid.module.scss';
+@import '@/components/v1/BuildingProfile/BuildingRules/InvoiceRulesTabPanelContent.module.scss';
+@import '@/components/v1/BuildingProfile/BuildingRules/RulesModal.module.scss';
+@import '@/components/v1/BuildingProfile/BuildingRules/BuildingDocumentCategoryPanel/BuildingDocumentCategoryPannel.module.scss';
+@import '@/components/v1/BuildingProfile/BuildingRules/RecurringRuleTabPanel/RecurringRulesTabPanelContent.module.scss';
+@import '@/components/v1/BuildingProfile/DigitalNoticeboard/DigitalNoticeboard.module.scss';
+@import '@/components/v1/BuildingProfile/DigitalNoticeboard/DigitalNoticeboardCarousel.module.scss';
+@import '@/components/v1/BuildingProfile/InAppNoticeboard/InAppNoticeboardCarousel.module.scss';
+
+@import '@/components/v1/DMS/BulkActionBar.module.scss';
+@import '@/components/v1/DMS/DisplayResult.module.scss';
+@import '@/components/v1/DMS/DocumentRowCollapse.module.scss';
+@import '@/components/v1/DMS/FavoriteToggler.module.scss';
+@import '@/components/v1/DMS/GridView.module.scss';
+@import '@/components/v1/DMS/GridViewItem.module.scss';
+@import '@/components/v1/DMS/Header.module.scss';
+@import '@/components/v1/DMS/ListViewItem.module.scss';
+@import '@/components/v1/DMS/NotFound.module.scss';
+@import '@/components/v1/DMS/RemindActionUserModal.module.scss';
+@import '@/components/v1/DMS/RowItemCollapse.module.scss';
+@import '@/components/v1/DMS/Search.module.scss';
+@import '@/components/v1/DMS/SearchDropdown.module.scss';
+@import '@/components/v1/DMS/SearchTipContents.module.scss';
+@import '@/components/v1/DMS/SharingModal.module.scss';
+@import '@/components/v1/DMS/SortOptions.module.scss';
+@import '@/components/v1/DMS/DocumentView/ApproverExplanation.module.scss';
+@import '@/components/v1/DMS/DocumentView/FilePreview.module.scss';
+@import '@/components/v1/DMS/DocumentView/FilePreviewFooter.module.scss';
+@import '@/components/v1/DMS/DocumentView/Footer.module.scss';
+@import '@/components/v1/DMS/DocumentView/Header.module.scss';
+@import '@/components/v1/DMS/DocumentView/History.module.scss';
+@import '@/components/v1/DMS/DocumentView/SharedWith.module.scss';
+@import '@/components/v1/DMS/FileUpload/Dropzone.module.scss';
+@import '@/components/v1/DMS/FileUpload/EditFile.module.scss';
+@import '@/components/v1/DMS/FileUpload/FileUpload.module.scss';
+@import '@/components/v1/DMS/FileUpload/UploadedFiles.module.scss';
+@import '@/components/v1/DMS/FileUpload/UploadProgress.module.scss';
+@import '@/components/v1/DMS/FinancialReports/FinancialReportsModal.module.scss';
+@import '@/components/v1/DMS/FinancialReports/ReportFormTabPanelContent.module.scss';
+@import '@/components/v1/DMS/FinancialReports/ReportItem.module.scss';
+@import '@/components/v1/DMS/InvoiceView/Accordion.module.scss';
+@import '@/components/v1/DMS/InvoiceView/ActionForm.module.scss';
+@import '@/components/v1/DMS/InvoiceView/CancelHoldInvoice.module.scss';
+@import '@/components/v1/DMS/InvoiceView/Creditor.module.scss';
+@import '@/components/v1/DMS/InvoiceView/DuplicatedInvoicesModal.module.scss';
+@import '@/components/v1/DMS/InvoiceView/InvoiceDetails.module.scss';
+@import '@/components/v1/DMS/InvoiceView/OtherInvoices.module.scss';
+@import '@/components/v1/DMS/InvoiceView/PassToUser.module.scss';
+@import '@/components/v1/DMS/InvoiceView/RecurringRuleTooltip.module.scss';
+@import '@/components/v1/DMS/InvoiceView/RowItems.module.scss';
+
+@import '@/components/v1/Document/OtherEmbeddedView.module.scss';
+@import '@/components/v1/Document/PdfEmbeddedView.module.scss';
+
+@import '@/components/v1/DocumentImport/DocumentImportForm.module.scss';
+
+@import '@/components/v1/Form/ValidationError.module.scss';
+@import '@/components/v1/Form/Fields/DropdownSearchField.module.scss';
+@import '@/components/v1/Form/Fields/PhoneInput.module.scss';
+@import '@/components/v1/Form/Fields/ReactSelect.module.scss';
+@import '@/components/v1/Form/Fields/RichTextEditor.module.scss';
+@import '@/components/v1/Form/Fields/Toggle.module.scss';
+
+@import '@/components/v1/Meetings/MeetingAgendaSection.module.scss';
+@import '@/components/v1/Meetings/MeetingAttachmentSection.module.scss';
+@import '@/components/v1/Meetings/MeetingCarousel.module.scss';
+
+@import '@/components/v1/Messages/ConversationPreview.module.scss';
+@import '@/components/v1/Messages/DocumentSidebar.module.scss';
+@import '@/components/v1/Messages/InvoiceAction.module.scss';
+@import '@/components/v1/Messages/JobSidebar.module.scss';
+@import '@/components/v1/Messages/LeftSidebar.module.scss';
+@import '@/components/v1/Messages/MapMarker.module.scss';
+@import '@/components/v1/Messages/Message.module.scss';
+@import '@/components/v1/Messages/MessageBox.module.scss';
+@import '@/components/v1/Messages/MessageItem.module.scss';
+@import '@/components/v1/Messages/MessageStart.module.scss';
+@import '@/components/v1/Messages/MessagingMiddle.module.scss';
+@import '@/components/v1/Messages/RightSidebar.module.scss';
+@import '@/components/v1/Messages/UploadOptions.module.scss';
+
+@import '@/components/v1/Modals/BuildingDirectoryModal.module.scss';
+@import '@/components/v1/Modals/BuildingRules.module.scss';
+@import '@/components/v1/Modals/BulkApproveInvoice.module.scss';
+@import '@/components/v1/Modals/BulkUpdatePriorityModal.module.scss';
+@import '@/components/v1/Modals/CreateEditNoticeboardModal.module.scss';
+@import '@/components/v1/Modals/DigitalNoticeboardListModal.module.scss';
+@import '@/components/v1/Modals/DocumentPreviewModal.module.scss';
+@import '@/components/v1/Modals/InAppNoticeboardReadMoreModal.module.scss';
+@import '@/components/v1/Modals/JobReferenceModal.module.scss';
+@import '@/components/v1/Modals/MeetingAttachmentUploadModal.module.scss';
+@import '@/components/v1/Modals/ModalContainer.module.scss';
+@import '@/components/v1/Modals/MyPropertiesModal.module.scss';
+@import '@/components/v1/Modals/OtherLocationsModal.module.scss';
+@import '@/components/v1/Modals/UpcomingWorkModal.module.scss';
+@import '@/components/v1/Modals/StrataMasterDataLogs/MissingStrataMasterDataModal.module.scss';
+
+@import '@/components/v1/Navbar/Navbar.module.scss';
+@import '@/components/v1/Navbar/OrganisationDropdown.module.scss';
+
+@import '@/components/v1/PlayGround/ReduxFormExample.module.scss';
+
+@import '@/components/v1/Register/ContactDetails.module.scss';
+@import '@/components/v1/Register/Password.module.scss';
+@import '@/components/v1/Register/PasswordIndicator.module.scss';
+
+@import '@/components/v1/Search/DisplayResult.module.scss';
+//@import '@/components/v1/Search/Search.module.scss';
+@import '@/components/v1/Search/SearchDropdown.module.scss';
+@import '@/components/v1/Settings/Navigation.module.scss';
+@import '@/components/v1/Settings/NotificationSettings.module.scss';
+@import '@/components/v1/Settings/PrivacySettings.module.scss';
+@import '@/components/v1/Settings/ProfileImageUpload.module.scss';
+@import '@/components/v1/Settings/ProfileSettings.module.scss';
+@import '@/components/v1/Settings/TwoFactorAuthentication.module.scss';
+
+@import '@/components/v1/Shared/Accordion.module.scss';
+@import '@/components/v1/Shared/Dropzone.module.scss';
+
+@import '@/components/v1/Avatar.module.scss';
+@import '@/components/v1/Banner.module.scss';
+@import '@/components/v1/Breadcrumbs.module.scss';
+@import '@/components/v1/CompareAndConnectAlert.module.scss';
+@import '@/components/v1/ContinueModal.module.scss';
+@import '@/components/v1/DeleteModal.module.scss';
+@import '@/components/v1/DropDown.module.scss';
+@import '@/components/v1/DropdownButton.module.scss';
+@import '@/components/v1/FileType.module.scss';
+@import '@/components/v1/Flash.module.scss';
+@import '@/components/v1/Footer.module.scss';
+@import '@/components/v1/Header.module.scss';
+@import '@/components/v1/Layout.module.scss';
+@import '@/components/v1/Loading.module.scss';
+@import '@/components/v1/Logo.module.scss';
+@import '@/components/v1/MapMarker.module.scss';
+@import '@/components/v1/Modal.module.scss';
+@import '@/components/v1/Notifications.module.scss';
+@import '@/components/v1/ProgressBar.module.scss';
+@import '@/components/v1/StarRating.module.scss';
+
+@import '@/pages/app.module';
+@import '@/pages/v1/error.module';
+@import '@/pages/v1/building-profile.module.scss';
+@import '@/pages/v1/connections.module.scss';
+@import '@/pages/v1/document-preview.module.scss';
+@import '@/pages/v1/invoice.module.scss';
+@import '@/pages/v1/messages.module.scss';
+@import '@/pages/v1/register.module.scss';
+@import '@/pages/v1/settings.module.scss';
+@import '@/pages/v1/strata-integration.module.scss';
+@import '@/pages/v1/strata-master-data-logs.module.scss';
+
+@import '@/pages/v1/documents/import.module.scss';
+@import '@/pages/v1/documents/index.module.scss';
+@import '@/pages/v1/meetings/[id].module.scss';
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}

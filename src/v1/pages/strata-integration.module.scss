@@ -1,0 +1,136 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+#strata-integration-page-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+
+  h3.account-settings-title{
+    padding: 30px 0 20px 0;
+  }
+
+  #strata-integration-container {
+    padding: 20px 0;
+
+    .connection-established-container,.no-connection-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .connection-established-image,.no-connection-image {
+        width: 120px;
+      }
+
+      .connection-established-title,.no-connection-title,.import-completed-title,.import__title--stopped,.import__title--pending,.import__title--failed {
+        padding: 15px 0;
+      }
+
+      .import-completed-title {
+        color: $primary;
+        display: flex;
+        align-items: center;
+      }
+
+      .toggle-wizard-modal-btn,.import-data-btn {
+        margin: 0 10px;
+      }
+
+      .importing-status-container {
+        width: 100%;
+      }
+
+      .actions-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .button {
+        display: flex;
+      }
+
+      .button__text {
+        margin-left: 5px;
+      }
+
+      .import-log__controls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+        grid-gap: 10px;
+      }
+    }
+  }
+
+  .loading {
+    height: 100%;
+  }
+}
+
+.wizard-modal-container {
+  min-height: 10vh;
+  max-height: 60vh;
+}
+
+.import-status-container {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include media-down(desktop) {
+    width: 100%;
+  }
+}
+
+.import-log-list {
+  margin-top: 15px;
+  padding: 1em 2em;
+  border: 1px solid $border;
+  background: #eee;
+  border-radius: 5px;
+
+  .import-log-entity {
+    margin-bottom: 1.2em;
+
+    .import-log-status {
+      align-items: center;
+      display: flex;
+
+      .import-log-status-indicator {
+        margin-right: 15px;
+      }
+    }
+    .import-log-status-details {
+      background: $off-white;
+      padding: .8em 2.3em;
+
+      margin-top: .5em;
+    }
+  }
+
+  .import-log-entity:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.import-log-details-accordion-header {
+  align-items: center;
+  display: flex;
+}
+
+.import-wizard-modal {
+  .modal-content {
+    width: 700px !important;
+    max-width: 700px !important;
+    height: 750px;
+  }
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,74 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+
+.footer {
+  background: $black;
+  color: $white;
+  width: 100%;
+
+  &.messages-content {
+    @include media-down(large-mobile) {
+      display: none;
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px !important;
+
+    @include media-down(large-mobile) {
+      text-align: center;
+    }
+
+    @include media-down(mobile) {
+      padding: 15px !important;
+    }
+
+    .logo {
+      width: 100px;
+      height: 20px;
+      @include media-down(large-mobile) {
+        margin: 15px auto;
+      }
+    }
+  }
+
+  .footer-sitemap {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    font-size: 14px;
+    @include media-down(mobile) {
+      width: 100%;
+    }
+
+    .footer-sitemap-legal {
+      padding-right: 20px;
+
+      @include media-down(mobile) {
+        font-size: 12px;
+        padding-right: 10px;
+      }
+    }
+
+    a {
+      text-decoration: underline;
+      color: inherit;
+    }
+
+    .social-links {
+      margin: 0 auto;
+    }
+  }
+
+  .social-links-nav .icon::before {
+    width: 23px;
+    height: 23px;
+    background-color: $white;
+  }
+}

@@ -1,0 +1,48 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.banner {
+    padding: 8px;
+    margin-bottom: 10px;
+
+    .banner-content {
+        max-width: 100%;
+        margin: 0px auto;
+        padding: 0px 40px;
+        text-align: center;
+        position: relative;
+        text-align: center;
+
+        @include media-down(large-tablet) {
+            padding: 0px 25px;
+        }
+
+        b {
+            font-weight: bold;
+        }
+
+        i {
+            font-style: italic;
+        }
+
+        a {
+            text-decoration: underline;
+            color: inherit;
+        }
+
+        .dismiss-button {
+            background-color: transparent;
+            border: none;
+            position: absolute;
+            right: 50px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 16px;
+
+            @include media-down(large-tablet) {
+                right: 10px;
+            }
+        }
+    }
+}

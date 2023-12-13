@@ -1,0 +1,272 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.document-header {
+  .hidden {
+    display: none;
+  }
+
+  .invoice-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .invoice-approve {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      .approve-invoice-button {
+        margin-right: 20px;
+      }
+
+      .setup-invoice-rule-button {
+        margin-right: 20px;
+      }
+
+      .button--re-export {
+        margin-right: 20px;
+      }
+
+      .override-approve-button {
+        background-color: $error;
+        border: $error;
+        margin-right: 15px;
+
+        &:hover {
+          background-color: darken($error, 15%);
+        }
+      }
+
+      .external-approve {
+        margin-right: 0px;
+        margin-left: 10px;
+      }
+
+      .invoice-options-dropdown {
+        width: 30px;
+        height: 30px;
+        background-color: #eaedf0;
+        color: black;
+        font-weight: bold;
+        font-size: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: relative;
+        padding-bottom: 18px;
+        text-decoration: none;
+
+        &.active {
+          padding: 0;
+
+          &:after {
+            content: '';
+            display: block;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 5px solid $white;
+            position: absolute;
+            top: 50%;
+            z-index: 99;
+            margin-top: 25px;
+          }
+        }
+
+        &:before {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .invoice-dropdown-container {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: $white;
+        border-radius: 5px;
+        margin-top: 30px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+
+        .invoice-dropdown-item {
+          display: block;
+          text-decoration: none;
+          cursor: pointer;
+          padding: 10px 25px;
+          white-space: nowrap;
+
+          &:first-child {
+            margin-top: 10px;
+          }
+          &:last-child {
+            margin-bottom: 10px;
+          }
+
+          &:hover {
+            text-decoration: underline;
+            opacity: 0.85;
+          }
+        }
+
+        .cancel-invoice,.delete-document,.reject-invoice {
+          color: $error;
+        }
+      }
+    }
+  }
+
+  .document-header-row-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+
+    .li-content {
+      flex: 1 1 auto;
+      min-width: 0;
+      margin: 0 10px;
+    }
+
+    .li-content > h3 {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    button {
+      margin-left: 10px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .document-header-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .li-before-content {
+    min-width: 27px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .li-content {
+    margin-left: 10px;
+
+    @include media-down(large-mobile) {
+      font-size: 13px;
+    }
+  }
+
+  .payment-date {
+    padding: 6px 10px;
+    margin-top: 15px;
+    background-color: #E1DDEC;
+    color: #5B3C8C;
+    text-align: center;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-size: 15px;
+    cursor: pointer;
+  }
+
+  .invoice-priority {
+    padding: 6px 10px;
+    margin-top: 15px;
+    background-color: #ffe8e7;
+    color: $error;
+    text-align: center;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+
+  .invoice-status {
+    padding: 6px 10px;
+    margin-top: 15px;
+    background-color: $white;
+    color: $off-black;
+    width: 100%;
+    text-align: center;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-size: 15px;
+
+    &.under-review {
+      background-color: rgba($tertiary, 0.1);
+      color: $tertiary;
+    }
+
+    &.processing,
+    &.extracting {
+      background-color: rgba($warning, 0.1);
+      color: $warning;
+    }
+
+    &.strata-manager-approval,
+    .external-approval {
+      background-color: rgba(purple, 0.1);
+      color: purple;
+    }
+
+    &.on-hold {
+      background-color: rgba(224, 115, 13, 0.1);
+      color: rgb(224, 115, 13);
+    }
+
+    &.approved,
+    &.paid {
+      background-color: rgba($primary, 0.1);
+      color: $primary;
+    }
+
+    &.cancelled,
+    &.failed,
+    &.processing-failed,
+    &.rejected {
+      background-color: rgba($error, 0.1);
+      color: $error;
+    }
+  }
+
+  .duplicate-invoice-indicator {
+    margin-left: 7px;
+    cursor: pointer;
+    display: inline;
+  }
+
+  .failed-invoice-processing {
+    margin-left: 7px;
+    cursor: pointer;
+    display: inline;
+  }
+}
+
+.failed-invoice-tooltip-content {
+  line-height: 1.4;
+}
+
+.dropdown-button {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 0; // changed
+  font-size: 20px;
+  line-height: .8;
+  border-radius: 15px;
+  border: 0;
+  background-color: #eaedf0;
+  display: flex;
+  justify-content: center;
+}

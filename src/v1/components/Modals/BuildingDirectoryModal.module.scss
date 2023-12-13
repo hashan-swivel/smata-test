@@ -1,0 +1,28 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.contact-result-item {
+  display: flex;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 10px 0;
+}
+
+.contact-result-item--avatar {
+  display: flex;
+  align-items: center;
+  flex: 0 0 70px;
+}
+
+.contact-result-item--details {
+  flex: 1 1 auto;
+}
+
+.contact-result-item--full-name {
+  font-weight: bold;
+}
+
+.contact-result-item--message-action {
+  display: flex;
+  align-items: center;
+}

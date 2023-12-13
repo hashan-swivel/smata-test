@@ -1,0 +1,27 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.empty-building-image-container {
+  background: $white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  .empty-building-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .empty-building-upload-button {
+    text-transform: none;
+    font-weight: bold;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+}

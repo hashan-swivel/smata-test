@@ -1,0 +1,55 @@
+/*=============================================>>>>>
+= Typography Mixins and Variables =
+===============================================>>>>>*/
+
+// Font weight variables
+// NOTE: Use 400 and 700 weights only
+// $font-weight-thin: 100;
+// $font-weight-extra-light: 200;
+// $font-weight-light: 300;
+$font-weight-regular: 400;
+// $font-weight-medium: 500;
+// $font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+// $font-weight-extra-bold: 800;
+// $font-weight-black: 900;
+
+
+@mixin heading-font() {
+  font-family: 'Lato', sans-serif;
+  font-weight: $font-weight-bold;
+}
+
+@mixin body-font() {
+  font-family: 'Lato', Sans-Serif;
+}
+
+@mixin h1() {
+  @include heading-font();
+  font-size: 38px;
+  line-height: 1.1em;
+}
+
+@mixin h2() {
+  @include heading-font();
+  font-size: 30px;
+  line-height: 1.1em;
+}
+
+@mixin h3() {
+  @include heading-font();
+  font-size: 24px;
+  line-height: 1.2em;
+}
+
+@mixin h4() {
+  @include heading-font();
+  font-size: 20px;
+  line-height: 1.3em;
+}
+
+@mixin h5() {
+  @include heading-font();
+  font-size: 18px;
+  line-height: 1.35em;
+}

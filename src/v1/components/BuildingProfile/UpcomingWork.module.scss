@@ -1,0 +1,88 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+// alice-carousel overrides here are meant to expand the items in the carousel to its full height
+// based on this: https://github.com/maxmarinich/react-alice-carousel/issues/203#issuecomment-872782728
+.alice-carousel__stage {
+  display: flex
+}
+
+.alice-carousel__stage-item {
+  flex: 1 0 auto;
+  height: auto;
+}
+
+.upcoming-work-container {
+  @include media-down(large-tablet) {
+    padding: 0;
+  }
+
+  @include media-down(small-tablet) {
+    max-width: calc(100vw - 85px);
+    border-bottom: 1px solid #E2E2E2;
+  }
+
+  @include media-down(large-mobile) {
+    max-width: 100%;
+  }
+
+  @include media-down(mobile) {
+    max-width: 100%;
+  }
+
+  .upcoming-work-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+
+    @include media-down(small-tablet) {
+      margin: 0 0 30px;
+    }
+
+    .all-work-button {
+      text-transform: none;
+      padding: 0 20px;
+      min-width: 110px;
+    }
+  }
+
+  .upcoming-work-items-container {
+    &.not-carousel {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 10px;
+      padding: 5px 0;
+      border-radius: 5px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+
+      @include media-down(large-tablet) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+      @include media-down(small-tablet) {
+        display: block;
+        padding-bottom: 20px;
+      }
+    }
+
+    .alice-carousel {
+      .alice-carousel__dots-item{
+        background-color: #cecece;
+
+        &:hover, &.__active {
+          background-color: #333333;
+        }
+      }
+    }
+
+    &.inactive {
+      display: none;
+    }
+  }
+
+  span.date.overdue-date{
+    border: thin solid $error;
+    color: $error;
+  }
+}

@@ -1,0 +1,89 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.vote-options {
+  display: flex;
+  gap: .5rem;
+}
+
+.vote-options input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+.vote-options label {
+  font-weight: $font-weight-bold;;
+  background-color: transparent;
+  border: 1px solid $textcolor-disabled;
+  color: $textcolor-disabled;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: .4em .8em;
+  font-size: 0.95em;
+
+  @include media-down(large-mobile) {
+    font-size: 0.85em;
+    padding: .2em .4em;
+  }
+}
+
+.vote-options label:hover {
+  &:hover {
+    color: $white;
+    background-color: $primary;
+    border-color: $primary;
+  }
+}
+
+.vote-options input[type="radio"]:checked + label {
+  color: $white;
+  background-color: $primary;
+  border-color: $primary;
+}
+
+.vote-options input[value='N'] + label:hover {
+  &:hover {
+    color: $white;
+    background-color: $danger;
+    border-color: $danger;
+  }
+}
+
+.vote-options input[type="radio"][value='N']:checked + label {
+  color: $white;
+  background-color: $danger;
+  border-color: $danger;
+}
+
+.vote-options input[value='A'] + label:hover {
+  &:hover {
+    color: $white;
+    background-color: $textcolor-disabled;
+    border-color: $textcolor-disabled;
+  }
+}
+
+.vote-options input[type="radio"][value='A']:checked + label {
+  color: $white;
+  background-color: $textcolor-disabled;
+  border-color: $textcolor-disabled;
+}
+
+.last-vote {
+  padding-top: 1rem;
+  font-size: 80%;
+
+  span[data-vote="Y"] {
+    color: $primary;
+  }
+
+  span[data-vote="A"] {
+    color: $textcolor-disabled;
+  }
+
+  span[data-vote="N"] {
+    color: $danger;
+  }
+}

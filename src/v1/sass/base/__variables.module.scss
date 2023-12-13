@@ -1,0 +1,64 @@
+/*=============================================>>>>>
+= Body font colour =
+===============================================>>>>>*/
+$textcolor: #353535;
+$textcolor-disabled: #B7B7B7;
+
+/*=============================================>>>>>
+= Brand colours =
+===============================================>>>>>*/
+$primary: #4FCBB2;
+$secondary: #333333;
+$tertiary: #4A90E2;
+$highlight: #4FCBB2;
+$light-blue: #78E0CB;
+$danger: #DC3545;
+$primary-darker: darken($primary, 5%);
+$secondary-darker: darken($secondary, 5%);
+$tertiary-darker: darken($tertiary, 5%);
+$highlight-darker: darken($highlight, 5%);
+$light-blue-darker: darken($light-blue, 5%);
+$danger-darker: darken($danger, 5%);
+
+/*=============================================>>>>>
+= Additional =
+===============================================>>>>>*/
+$border: #D8E5EE;
+$disabled: #EAEDF0;
+
+/*=============================================>>>>>
+= Black/white =
+===============================================>>>>>*/
+$white: #ffffff;
+$black: #000000;
+$off-white: #F4F4F4;
+$off-black: #333333;
+
+/*=============================================>>>>>
+= User noticiation colours =
+===============================================>>>>>*/
+$success: #4FCBB2;
+$warning: #F5BF65;
+$error: #D4504B;
+
+/*=============================================>>>>>
+= Social colours =
+===============================================>>>>>*/
+$twitter-hex: #00aced;
+$facebook-hex: #3b5998;
+$linkedin-hex: #007bb6;
+$youtube-hex: #bb0000;
+$tumblr-hex: #32506d;
+$instagram-hex: #517fa4;
+$vimeo-hex: #aad450;
+$lastfm-hex: #D51007;
+$google-hex: #4285f4;
+$github-hex: #4078c0;
+
+$border-color: #E0E0E0;
+$border-width: 1px;
+$border-radius: 0.375rem;
+$body-color: #212529;
+$body-bg: #fff;
+
+$font-size: 16px;

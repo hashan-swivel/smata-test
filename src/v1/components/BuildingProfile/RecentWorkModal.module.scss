@@ -1,0 +1,84 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.recent-work-modal-container {
+  padding: 0 20px 20px 20px;
+  max-height: 90vh;
+  overflow-y: auto;
+
+  .recent-work-modal-title {
+    margin: 0 0 20px 0;
+  }
+
+  .recent-work-list-container {
+    max-height: 100vh;
+
+    .work-history-content-grid {
+      height: 20%;
+      display: grid;
+      grid-template-columns: 10% auto;
+
+      @include media-down(small-tablet) {
+        &.inactive {
+          display: none;
+        }
+      }
+
+      .icon-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .work-icon {
+          &:before {
+            height: 20px;
+            width: 20px;
+            vertical-align: middle;
+          }
+        }
+
+        .work-green-line {
+          height: 100%;
+          background-color: $primary;
+          width: 3px;
+          margin: 5px 0;
+        }
+      }
+
+      .work-text {
+        line-height: 1.4em;
+        padding-bottom: 20px;
+
+        .job-container {
+          .job-date {
+            @include media-down(small-tablet) {
+              font-size: 14px;
+            }
+            color: #8c8c8c;
+          }
+          .subtitle {
+            cursor: pointer;
+          }
+        }
+      }
+
+      &:last-of-type {
+        .icon-container {
+          .work-green-line {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .job-filter-inputs {
+    .job-name-filter {
+      .input { padding: 10px; }
+    }
+    .job-status-filter {
+      .select { padding: 10px; }
+    }
+  }
+}

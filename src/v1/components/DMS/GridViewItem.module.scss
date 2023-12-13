@@ -1,0 +1,191 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.dms-grid-view-item {
+  background: $white;
+  border-radius: 5px;
+  border: darken($off-white, 4%) 1px solid;
+  padding: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .dms-thumbnail-img {
+    width: 250px;
+    height: 350px;
+
+    @include media-between(large-mobile, small-desktop) {
+      width: 150px;
+      height: 210px;
+    }
+
+    object-fit: contain;
+    object-position: center;
+  }
+
+  &.red-border {
+    border-color: lighten($error, 20%);
+  }
+
+  &.bg-light-red {
+    background-color: #ffe8e7;
+  }
+
+  .invoice-status {
+    border: 1px solid $black;
+    color: $off-black;
+    text-align: center;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 12px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 7px;
+
+    &.pending {
+      border-color: purple;
+      color: purple;
+    }
+
+    &.under-review {
+      border-color: $tertiary;
+      color: $tertiary;
+    }
+
+    &.processing, &.extracting {
+      color: $warning;
+    }
+
+    &.on-hold {
+      border-color: rgb(224, 115, 13);
+      color: rgb(224, 115, 13);
+    }
+
+    &.approved {
+      border-color: $primary;
+      color: $primary;
+    }
+
+    &.cancelled, &.failed, &.rejected, &.processing-failed {
+      border-color: $error;
+      color: $error;
+    }
+  }
+}
+
+.dms-grid-view-item-actions {
+  display: flex;
+  justify-content: space-between;
+
+  .dms-grid-view-item-actions-left {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .dropdown {
+    width: 200px;
+    font-size: 14px;
+  }
+
+  .dms-grid-view-item-actions-right {
+    display: flex;
+
+    .dropdown-wrapper .label {
+      padding: 0;
+      width: 24px;
+      height: 24px;
+      font-size: 20px;
+      padding-bottom: 11.5px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    a.schedule-date,
+    a.job-link {
+      display: flex;
+      align-items: center;
+      margin-right: .1rem;
+      background-color: white;
+      border: #f4f4f4 1px solid;
+      border-radius: 50%;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+
+      span {
+        display: flex;
+      }
+
+      .icon:before {
+        width: 13px;
+        height: 13px;
+      }
+    }
+  }
+}
+
+.dms-grid-view-item-body {
+  text-align: center;
+  padding: 10px 0 0;
+  overflow: hidden;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  .file-type-icon {
+    margin: 0 auto 10px;
+  }
+
+  .dms-grid-view-item-container {
+    position: relative;
+    cursor: pointer;
+
+    .icon {
+      top: 0;
+      right: 0;
+      background: #333333;
+      padding: 0 5px;
+    }
+  }
+
+  .dms-grid-item-name, .dms-grid-item-category {
+    @include ellipsis();
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .dms-grid-item-name {
+    color: $textcolor;
+  }
+
+  .dms-grid-item-category {
+    color: #8E8E8E;
+    text-transform: capitalize;
+  }
+
+  .dms-grid-item-invoice-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .duplicate-icon {
+      cursor: pointer;
+      margin-right: .3rem;
+    }
+  }
+}
+
+.dms-grid-view-item-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0 0;
+  font-size: 14px;
+  color: rgba($textcolor, 0.6);
+}

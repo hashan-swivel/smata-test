@@ -1,0 +1,20 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.dropzone-container{
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px dotted #EAF0EC;
+
+  p{
+    margin: 0;
+
+    a{
+      color: #0081FF;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.building-document-category-card {
+  border: 1.5px solid #DFDFDF;
+  margin: 15px 0;
+  padding: 15px;
+  position: relative;
+  border-radius: 10px;
+
+  &:hover{
+    background-color: #F8F8F8;
+  }
+
+  .action-buttons {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+  }
+
+  hr {
+    border: 1.5px solid #DFDFDF;
+    border-radius: 0.75px;
+    margin: 10px 0 15px 0;
+  }
+}
+
+.document-rule-card:hover > .document-rule-actions {
+  opacity: 1;
+}
+
+.search-input {
+  flex: 1;
+}
+
+// Shared between child
+.footer-button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.react-tabs__tab-panel {
+  .loading {
+    height: 20vh;
+  }
+}

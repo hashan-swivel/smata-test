@@ -1,0 +1,200 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.dms-sort-options {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(24, 1fr);
+  padding: 10px;
+
+  @include media-down(large-mobile) {
+    padding: 5px;
+    grid-gap: 5px;
+  }
+
+  &.document-view {
+    min-width: 720px;
+  }
+
+  &.invoice-view {
+    min-width: 975px;
+  }
+}
+
+.dms-sort-option {
+  @include ellipsis();
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  color: black;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:after {
+    width: 9px;
+    height: 9px;
+    margin: 0 0 0 10px;
+    transition: transform 0.3s;
+  }
+
+  &.active {
+    &:after {
+      transform: rotate(-180deg);
+    }
+  }
+
+  // Other doc type
+  &.doc-select-all {
+    grid-column: 1 / span 3;
+  }
+
+  &.doc-sort-sp {
+    grid-column: 4 / span 3;
+
+    a {
+      color: black;
+    }
+  }
+
+  &.doc-sort-type {
+    grid-column: 7 / span 3;
+  }
+
+  &.doc-sort-name {
+    grid-column: 10 / span 9;
+  }
+
+  &.doc-sort-date {
+    grid-column: 19 / span 3;
+  }
+
+  &.doc-actions-header {
+    grid-column: 22 / span 3;
+  }
+
+  // Invoice type
+  &.invoice-select-all {
+    grid-column: 1 / span 2;
+  }
+
+  &.invoice-sp-number {
+    grid-column: 3 / span 2;
+  }
+
+  &.invoice-sort-contractor {
+    grid-column: 5 / span 4;
+  }
+
+  &.invoice-sort-status {
+    grid-column: 9 / span 3;
+  }
+
+  &.invoice-sort-number {
+    grid-column: 12 / span 2;
+  }
+
+  &.invoice-sort-amount {
+    grid-column: 14 / span 2;
+  }
+
+  &.invoice-sort-date {
+    grid-column: 16 / span 2;
+  }
+
+  &.invoice-sort-currently-with {
+    display: flex;
+    justify-content: center;
+    grid-column: 18 / span 2;
+  }
+
+  &.sort-currently-time-with {
+    grid-column: 20 / span 2;
+  }
+
+  &.invoice-paid-date {
+    grid-column: 22 / span 2;
+  }
+
+  &.invoice-actions-header {
+    grid-column: 24 / span 2;
+  }
+
+  a{
+    color: black;
+  }
+
+}
+
+.tippy-popper {
+  #invoice-status-explanation-table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 90%;
+  }
+
+  #invoice-status-explanation-table tr td {
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+
+  #invoice-status-explanation-table tr td:first-child {
+    text-align: left;
+    vertical-align: middle;
+    padding-left: 0;
+  }
+
+  #invoice-status-explanation-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  #invoice-status-explanation-table {
+    .invoice-status {
+      color: $off-black;
+
+      &.under-review {
+        border-color: $tertiary;
+        color: $tertiary;
+      }
+
+      &.processing,
+      &.extracting {
+        color: $warning;
+      }
+
+      &.strata-manager-approval,
+      .external-approval {
+        border-color: purple;
+        color: purple;
+      }
+
+      &.on-hold {
+        border-color: rgb(224, 115, 13);
+        color: rgb(224, 115, 13);
+      }
+
+      &.approved,
+      .paid {
+        border-color: $primary;
+        color: $primary;
+      }
+
+      &.cancelled,
+      &.failed,
+      &.processing-failed {
+        border-color: $error;
+        color: $error;
+      }
+
+      &.deleted {
+        border-color: $textcolor-disabled;
+        color: $textcolor-disabled;
+      }
+    }
+  }
+}

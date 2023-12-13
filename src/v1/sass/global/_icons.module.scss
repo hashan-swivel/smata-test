@@ -1,0 +1,224 @@
+/*=============================================>>>>>
+= Icon Helper (for use with IcoMoon or other icon fonts) =
+===============================================>>>>>*/
+
+$icons: (
+  'add-dark',
+  'add-white',
+  'add-green',
+  'arrow-left2',
+  'bell-dark',
+  'bell-white',
+  'bin',
+  'bin-white',
+  'building-dark',
+  'building-white',
+  'calendar-dark',
+  'calendar-white',
+  'card-dark',
+  'card-white',
+  'camera-dark',
+  'camera-white',
+  'chevron-down-dark',
+  'chevron-down-white',
+  'clock-dark',
+  'clock-white',
+  'contact-white',
+  'comment-white',
+  'comment-dark',
+  'comment-white',
+  'complete-dark',
+  'complete-white',
+  'creditor-white',
+  'cross-with-border-dark',
+  'cross-with-border-white',
+  'cross-white',
+  'cross-dark',
+  'cross-red',
+  'dashboard-white',
+  'database-white',
+  'document-dark',
+  'document-white',
+  'dollar-dark',
+  'dollar-white',
+  'email-at-dark',
+  'email-at-white',
+  'facebook-white',
+  'file-plus-dark',
+  'file-plus-white',
+  'folder-dark',
+  'folder-white',
+  'grid-dark',
+  'grid-white',
+  'heart-outline-dark',
+  'heart-outline-white',
+  'heart-solid-dark',
+  'heart-solid-red',
+  'heart-solid-white',
+  'happy-dark',
+  'happy-white',
+  'help-dark',
+  'help-white',
+  'info-dark',
+  'info-white',
+  'instagram-white',
+  'list-dark',
+  'list-white',
+  'minus-dark',
+  'minus-white',
+  'open-dark',
+  'open-white',
+  'pencil',
+  'pencil-dark',
+  'pencil-white',
+  'plus-dark',
+  'plus-white',
+  'pushpin',
+  'restaurant-dark',
+  'restaurant-white',
+  'ribbon-dark',
+  'ribbon-white',
+  'schedule-white',
+  'school-dark',
+  'school-white',
+  'search-dark',
+  'search-white',
+  'star-green',
+  'star-dark',
+  'star-dark-filled',
+  'star-white',
+  'tags-dark',
+  'tags-white',
+  'thumb-down-dark',
+  'thumb-down-white',
+  'thumb-up-dark',
+  'thumb-up-white',
+  'train-dark',
+  'train-white',
+  'user-dark',
+  'user-white',
+  'van-dark',
+  'van-white',
+  'video-camera-dark',
+  'video-camera-white',
+  'warning-dark',
+  'warning-red',
+  'warning-white',
+  'work-dark',
+  'work-white',
+  'smata-work-white',
+  'smata-work-dark',
+  'smata-help-white',
+  'smata-building-white',
+  'zoom-expand-button',
+  'zoom-expand-white',
+  'zoom-expand',
+  'zoom-minus-button',
+  'zoom-minus-white',
+  'zoom-minus',
+  'zoom-plus-button',
+  'zoom-plus-white',
+  'zoom-plus',
+  'inbox',
+  'envelop',
+  'dollar',
+  'clock-regular',
+  'bell-regular',
+  'check-double-solid',
+  'reports-dark',
+  'reports-white',
+  'rotate-white',
+  'new-tab-white',
+  'strata-master-integration-white',
+  'strata-manager-logs-white',
+);
+
+footer .icon,
+header .icon {
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: no-repeat center;
+    background-size: contain;
+  }
+  @each $name in $icons {
+    &.icon-#{$name} {
+      &:before {
+        -webkit-mask-image: url('../../images/icons/#{$name}.svg');
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: contain;
+        mask-image: url('../../images/icons/#{$name}.svg');
+        mask-repeat: no-repeat;
+        mask-size: contain;
+      }
+    }
+  }
+}
+
+.main-content,
+.modal {
+  .icon {
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background: no-repeat center;
+      background-size: contain;
+    }
+    @each $name in $icons {
+      &.icon-#{$name} {
+        &:before {
+          background-image: url('../../images/icons/#{$name}.svg');
+        }
+      }
+    }
+  }
+}
+
+footer .icon-after,
+header .icon-after {
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: no-repeat center;
+    background-size: contain;
+  }
+  @each $name in $icons {
+    &.icon-#{$name} {
+      &:after {
+        -webkit-mask-image: url('../../images/icons/#{$name}.svg');
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: contain;
+        mask-image: url('../../images/icons/#{$name}.svg');
+        mask-repeat: no-repeat;
+        mask-size: contain;
+      }
+    }
+  }
+}
+
+.main-content,
+.modal {
+  .icon-after {
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background: no-repeat center;
+      background-size: contain;
+    }
+    @each $name in $icons {
+      &.icon-#{$name} {
+        &:after {
+          background-image: url('../../images/icons/#{$name}.svg');
+        }
+      }
+    }
+  }
+}

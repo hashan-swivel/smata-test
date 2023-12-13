@@ -1,0 +1,75 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.document-view-wrapper {
+  grid-template-columns: 0 50% 50%;
+
+  @include media-down(tablet) {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  .shared-approvers-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    .accordion-wrapper {
+      margin: 0;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+
+      .accordion-item {
+        flex: 1
+      }
+
+      .document-view-block-content {
+        height: 100%;
+      }
+
+      .accordion-content {
+        height: 100%;
+      }
+    }
+
+    @include media-down(large-tablet) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}
+
+.document-view-right {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0 30px 15px;
+
+  @include media-down(large-tablet) {
+    padding: 30px 0;
+  }
+  @include media-down(tablet) {
+    padding: 10px 0;
+  }
+}
+
+.invoice-processing-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  font-weight: 500;
+  color: $white;
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}

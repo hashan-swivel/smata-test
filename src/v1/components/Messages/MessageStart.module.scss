@@ -1,0 +1,26 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.message-start-container {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .start-conversation-title {
+    text-align: center;
+    margin-top: 20px; 
+  }
+
+  .start-conversation-avatars {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+    .avatar {
+      margin-left: -5px;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.organisations-dropdown-menu {
+  padding: 0 !important;
+  left: -205px !important;
+  min-width: 220px;
+
+  li {
+    width: 220px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border-bottom: 1px solid #cccccc;
+
+    &:last-of-type{
+      border-bottom: none;
+    }
+
+    img {
+      height: auto;
+      width: auto;
+      max-height: 45px;
+      max-width: 180px;
+      min-width: 116px;
+    }
+
+    .dark {
+      background: url('../../../images/logo.svg') no-repeat;
+      background-size: contain;
+      font-size: 0;
+      width: 180px;
+      height: 35px;
+    }
+
+    .light {
+      background: url('../../../images/logo-light.svg') no-repeat;
+      background-size: contain;
+      font-size: 0;
+      width: 180px;
+      height: 35px;
+    }
+  }
+}

@@ -1,0 +1,77 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.messages-container-wrapper {
+  display: flex;
+  height: 100%;
+  background-color: $white;
+  padding: 0 40px;
+
+  @include media-down(large-tablet) {
+    padding: 0;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .loading-container {
+    flex: 0.75;
+    height: 100%;
+  }
+
+  .messaging-middle-container {
+    display: flex;
+    flex: 0.4;
+    flex-direction: column;
+    overflow-y: auto;
+
+    .mobile-messaging-navbar {
+      background: $off-white;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 10px;
+
+      @include media-up(large-tablet) {
+        display: none;
+        padding: 0px;
+      }
+
+      button {
+        display: flex;
+        align-items: center;
+        border: 0;
+        background: transparent !important;
+        padding: 0;
+      }
+
+      .back-button {
+        &:before {
+          transform: rotate(90deg);
+        }
+      }
+
+      .show-document-button {
+        &:after {
+          transform: rotate(270deg);
+        }
+
+        &.inactive {
+          display: none;
+        }
+      }
+    }
+
+    @include media-down(large-tablet) {
+      height: 100%;
+
+      &.inactive {
+        display: none;
+      }
+    }
+
+    .no-message-clicked {
+      align-self: center;
+      margin: 30px auto;
+    }
+  }
+}

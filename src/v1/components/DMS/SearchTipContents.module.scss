@@ -1,0 +1,57 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.search-tip-contents {
+  .modal-content {
+    max-width: 620px;
+  }
+  .bold {
+    font-weight: bold;
+  }
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+  ul {
+    list-style: disc;
+    padding-left: 15px;
+    margin-left: 25px;
+    margin-bottom: 15px;
+  }
+  .mb-0 {
+    margin-bottom: 0;
+  }
+  .italic {
+    font-style: italic;
+  }
+}
+
+.search-tip-modal-container {
+  .react-tabs {
+    margin-top: -1rem;
+  }
+  ul.react-tabs__tab-list {
+    margin: 0 0 2rem;
+    background-color: $black;
+    display: flex;
+    width: 100%;
+    padding-bottom: 5px;
+  }
+  .react-tabs__tab {
+    color: $white;
+    border-radius: 5px 5px 0 0;
+    width: 30%;
+  }
+  .react-tabs__tab--selected {
+    background: $border;
+    border-color: $white;
+    color: $black;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: -5px;
+  }
+}

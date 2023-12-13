@@ -1,0 +1,50 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.action-form {
+  .buttons-container {
+    width: 100%;
+    margin: 20px 0 10px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .close-button {
+    width: 49%;
+    border: 1px solid $off-black;
+    background: $white;
+    color: $off-black;
+    &:hover {
+      background-color: $black;
+      color: $white;
+    }
+  }
+
+  .success-button {
+    width: 49%;
+
+    &.green {
+      background-color: $primary;
+      border: 1px solid $primary;
+
+      &:hover {
+        background-color: $black;
+        color: $white;
+      }
+    }
+
+    &.red {
+      background-color: $error;
+      border: 1px solid $error;
+
+      &:hover {
+        background-color: darken($error, 15%);
+      }
+    }
+  }
+}

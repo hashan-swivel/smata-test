@@ -1,0 +1,17 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.dropzone-modal {
+
+  .profile-image-uploader {
+
+    &.file-upload-container {
+      margin: 0;
+
+      .file-upload-top .delete-cross:before {
+        background-color: $off-black;
+      }
+    }
+  }
+}

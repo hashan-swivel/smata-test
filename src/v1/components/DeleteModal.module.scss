@@ -1,0 +1,65 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+
+
+    .delete-modal-container {
+      position: fixed;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      left: 0;
+    
+      .delete-modal-container-inner {
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        height: max-content;
+        padding: 25px 30px;
+        margin: auto;
+        min-width: 400px;
+        width: 550px;
+        min-height: 120px;
+        border-radius: 6px;
+    
+        .delete_modal_btn_box {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin: 35px auto 0;
+          max-width: 100%;
+          width: 40%;
+    
+          button {
+            color: #fff;
+            padding: 0;
+            width: 85px;
+            height: 32px;
+            border-radius: 8px;
+            border: none;
+            font-weight: 600;
+            font-size: 16px;
+    
+            &.cancel-btn {
+              background: #2f9f88;
+            }
+    
+            &.delete-btn {
+              background: #4c4747;
+            }
+            &:hover {
+              box-shadow: 0 1px 4px 0 rgba(12, 12, 13, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.15);
+            }
+          }
+        }
+      }
+    }

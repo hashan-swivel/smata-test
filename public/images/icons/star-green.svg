@@ -1,0 +1,22 @@
+<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" stroke="null" style="vector-effect: non-scaling-stroke;">
+ <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+
+ <title stroke="null">Shape</title>
+ <desc stroke="null">Created with Sketch.</desc>
+ <g stroke="null">
+  <title stroke="null">background</title>
+  <rect stroke="null" fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g stroke="null">
+  <title stroke="null">Layer 1</title>
+  <g style="vector-effect: non-scaling-stroke;" fill="#00A344" stroke-width="3" id="Symbols">
+   <g stroke="null" style="vector-effect: non-scaling-stroke;" fill="#00A344" id="UI-/-Rating">
+    <g stroke="null" style="vector-effect: non-scaling-stroke;" id="Group-2">
+     <path stroke="null" style="vector-effect: non-scaling-stroke;" stroke-width="0" stroke-dasharray="2,2" id="Shape" d="m7.99963,0.290908c-0.13202,0 -0.25041,0.08128 -0.29812,0.20437l-1.9731,5.0868l-5.42492,0.27687c-0.13219,0.00669 -0.24662,0.09407 -0.28789,0.21983c-0.04127,0.12575 -0.00087,0.26394 0.10164,0.34766l4.22432,3.4537l-1.38748,5.24055c-0.03391,0.12769 0.01414,0.2631 0.12096,0.34085c0.10681,0.07776 0.25043,0.08189 0.36153,0.01039l4.56306,-2.9287l4.56305,2.9287c0.11111,0.0715 0.25472,0.06737 0.36154,-0.01039c0.10681,-0.07775 0.15486,-0.21316 0.12096,-0.34085l-1.38748,-5.24055l4.22431,-3.4537c0.10252,-0.08372 0.14292,-0.22191 0.10164,-0.34766c-0.04127,-0.12576 -0.1557,-0.21314 -0.28789,-0.21983l-5.42492,-0.27687l-1.97309,-5.0868c-0.04771,-0.12309 -0.16611,-0.20437 -0.29812,-0.20437zm0,1.20436l1.74935,4.51118c0.04572,0.1177 0.15638,0.19751 0.28249,0.20375l4.80306,0.24562l-3.7412,3.05933c-0.09707,0.07937 -0.13885,0.20812 -0.10687,0.32937l1.22935,4.6443l-4.04306,-2.59558c-0.10545,-0.06783 -0.24079,-0.06783 -0.34625,0l-4.04306,2.59558l1.22936,-4.6443c0.03198,-0.12125 -0.0098,-0.25 -0.10688,-0.32937l-3.74119,-3.05933l4.80305,-0.24562c0.12612,-0.00624 0.23677,-0.08605 0.2825,-0.20375l1.74935,-4.51118z"/>
+    </g>
+   </g>
+   <path stroke="null" style="vector-effect: non-scaling-stroke;" id="svg_1" d="m0.178662,6.126577l6.02814,0l1.862742,-5.7781l1.862743,5.7781l6.028139,0l-4.876858,3.571021l1.862838,5.7781l-4.876861,-3.571118l-4.87686,3.571118l1.862838,-5.7781l-4.87686,-3.571021z" stroke-dasharray="2,2" stroke-width="0" fill="none"/>
+  </g>
+  <path stroke="null" style="vector-effect: non-scaling-stroke;" id="svg_2" d="m-0.11733,6.108984l6.167034,0l1.905662,-5.75032l1.905662,5.75032l6.167034,0l-4.989232,3.55385l1.905768,5.75032l-4.989232,-3.55395l-4.989232,3.55395l2.046772,-5.75032l-5.130236,-3.55385z" stroke-width="0" fill="#00a344"/>
+ </g>
+</svg>

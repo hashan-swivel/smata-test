@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="43px" height="44px" viewBox="0 0 43 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>minus</title>
+    <desc>Created with Sketch.</desc>
+    <g id="minus" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M17,0 C7.621094,0 0,7.621094 0,17 C0,26.378906 7.621094,34 17,34 C20.710938,34 24.140625,32.804688 26.9375,30.78125 L40.09375,43.90625 L42.90625,41.09375 L29.90625,28.0625 C32.460938,25.085938 34,21.222656 34,17 C34,7.621094 26.378906,0 17,0 Z M17,2 C25.296875,2 32,8.703125 32,17 C32,25.296875 25.296875,32 17,32 C8.703125,32 2,25.296875 2,17 C2,8.703125 8.703125,2 17,2 Z M9,16 L9,18 L25,18 L25,16 L9,16 Z" id="Shape" fill="#333333" fill-rule="nonzero"></path>
+    </g>
+</svg>

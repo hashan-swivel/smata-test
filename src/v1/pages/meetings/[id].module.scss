@@ -1,0 +1,59 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.meetings__page {
+  padding: 0 2rem;
+}
+
+.meetings__wrapper {
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: row;
+  align-items: flex-start;
+
+  @include media-down(tablet) {
+    flex-direction: column;
+  }
+}
+
+.meetings__container--left {
+  flex: 3;
+  border-right: 1.5px solid $border-color;
+
+  @include media-down(tablet) {
+    border-right: none;
+    flex: 1;
+  }
+}
+
+.meetings__container--right {
+  flex: 2;
+}
+
+.meeting-details {
+  padding-bottom: 1rem;
+}
+
+.building-details {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: 1px solid #E0E0E0;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.meeting-detail,.building-detail {
+  margin-bottom: .5rem;
+  min-width: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  span {
+    margin-left: .5rem;
+    min-width: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

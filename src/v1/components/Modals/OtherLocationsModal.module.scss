@@ -1,0 +1,17 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.other-locations-modal {
+  .locations-wrapper {
+    margin-top: 20px;
+    padding: 10px;
+
+    ul {
+      display: block;
+      list-style-type: disc;
+      padding-inline-start: 20px;
+
+    }
+  }
+}

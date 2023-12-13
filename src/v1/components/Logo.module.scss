@@ -1,0 +1,30 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.logo {
+  display: flex;
+  padding: 0;
+
+  > img {
+    height: auto;
+    width: auto;
+    max-height: 45px;
+    max-width: 180px;
+    min-width: 116px;
+  }
+
+  &.dark {
+    background-size: contain;
+    font-size: 0;
+    width: 180px;
+    height: 35px;
+  }
+
+  &.light {
+    background-size: contain;
+    font-size: 0;
+    width: 180px;
+    height: 35px;
+  }
+}

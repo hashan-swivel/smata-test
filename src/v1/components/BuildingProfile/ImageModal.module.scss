@@ -1,0 +1,46 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.dropzone-modal {
+
+  .modal-content {
+    padding: 15px;
+    display: flex;
+    overflow-x: hidden;
+
+    .modal-cross-close {
+      display: flex;
+      flex-direction: row-reverse;
+
+      &:before{
+        height: 18px;
+        width: 18px;
+        background-color: $disabled;
+        border: 6px solid $disabled;
+        border-radius: 50%;
+      }
+    }
+
+    .image-modal-container {
+      padding: 15px 0 0;
+
+      .image_box {
+        img {
+          height: 200px;
+          width: 100%;
+          object-fit: cover;
+          border-radius: 4px;
+        }
+      }
+
+      .image-description {
+        margin: 0;
+        font-size: 16px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 600;
+      }
+    }
+  }
+}
+

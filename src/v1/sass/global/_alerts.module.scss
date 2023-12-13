@@ -1,0 +1,48 @@
+.alert {
+  padding: .75rem 1.25rem;
+  border-radius: .25rem;
+  border: 1px solid transparent;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.alert--success {
+  color: #1d6455;
+  background-color: #c5eee6;
+  border-color: $primary;
+}
+
+.alert--danger {
+  color: #842029;
+  background-color: #f8d7da;
+  border-color: #f5c2c7;
+}
+
+.alert--warning {
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+}
+
+.alert--info {
+  color: #055160;
+  background-color: #cff4fc;
+  border-color: #b6effb;
+}
+
+.alert__text {
+  display: flex;
+  align-items: center;
+
+  &:before {
+    margin-right: 10px;
+  }
+}
+
+.swal2-loader {
+  border-color: $primary transparent $primary transparent !important;
+}
+
+.__react_component_tooltip.show {
+  opacity: 1 !important;
+}

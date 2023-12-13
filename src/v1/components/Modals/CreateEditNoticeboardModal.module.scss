@@ -1,0 +1,39 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.create-noticeboard-modal {
+  .notice-text {
+    // To enable auto line breaks
+    max-width: 452px;
+
+    @include media-down(large-tablet) {
+      max-width: 100%;
+    }
+  }
+
+  .horizontal-separator {
+    position: relative;
+    text-align: center;
+    height: 20px;
+
+    hr {
+      position: absolute;
+      top: 50%;
+      left: 0px;
+      right: 0px;
+      margin: 0px;
+      transform: translateY(-50%);
+    }
+
+    span {
+      display: inline-block;
+      background-color: #fff;
+      padding: 0px 10px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

@@ -1,0 +1,123 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.notification-settings-container {
+  flex: 1;
+
+  form {
+    background-color: $white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .hidden {
+    visibility: hidden !important;
+  }
+
+  .field-heading {
+    border-width: 0;
+  }
+
+  .field-wrapper {
+    margin-top: 20px;
+  }
+
+  .fields-snooze {
+    width: 50%;
+  }
+
+  button[type='submit'] {
+    margin-top: 10px;
+    float: right;
+  }
+
+  .notification-settings-actions {
+    overflow: hidden;
+  }
+
+  .notification-settings-snooze {
+    padding-top: 20px;
+    margin-top: 10px;
+    border-top: 1px solid #eee;
+
+    .snooze-fields {
+      width: 30%;
+    }
+  }
+
+  .notification-settings-row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .notification-settings-header {
+    padding: 5px 30px 20px;
+
+    .settings-header {
+      font-weight: bold;
+
+      &.activity-setting {
+        grid-column: 1 / span 4;
+      }
+
+      &.setting-toggle {
+        grid-column: span 1;
+        justify-self: center;
+      }
+
+      &.email-frequency {
+        grid-column: 8 / span 5;
+        justify-self: center;
+      }
+    }
+  }
+
+  .notification-settings-toggle {
+    .icon-after::after {
+      width: 9px;
+      height: 9px;
+      margin-left: 9px;
+      transition: transform 0.2s;
+    }
+
+    .active.icon-after::after {
+      transform: rotate(180deg);
+    }
+  }
+
+  .notification-settings-item-container {
+    max-width: 1460px;
+    background-color: $white;
+    border-radius: 5px;
+    border: 1px solid #eee;
+    padding: 15px 30px;
+    margin-bottom: 10px;
+  }
+
+  .notification-settings-item {
+    .field {
+      display: flex;
+    }
+
+    .field-heading {
+      grid-column: 1 / span 4;
+      flex-direction: column;
+      .hint {
+        font-size: 90%;
+        color: #999;
+      }
+    }
+
+    .field-toggle {
+      grid-column: span 1;
+      justify-content: center;
+    }
+
+    .select-field {
+      align-items: center;
+      grid-column: 8 / span 5;
+    }
+  }
+}

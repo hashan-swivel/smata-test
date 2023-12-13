@@ -1,0 +1,5 @@
+export const locationContactConstants = {
+  BASE_PATH: '/v1/location_contacts',
+  GET_LOCATION_CONTACTS: 'GET_LOCATION_CONTACTS',
+  UPDATE_LOCATION_CONTACTS_LOADING: 'UPDATE_LOCATION_CONTACTS_LOADING'
+};

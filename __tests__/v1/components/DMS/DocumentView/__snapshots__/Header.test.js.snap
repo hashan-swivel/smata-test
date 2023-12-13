@@ -1,0 +1,219 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InvoicePreview > Header renders correctly 1`] = `
+<div
+  className="document-header"
+>
+  <div
+    className="invoice-header-container"
+  >
+    <div
+      className="breadcrumbs"
+    >
+      <a
+        className="breadcrumb"
+        href="/documents?showInvoice=true"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        style={
+          Object {
+            "backgroundImage": "",
+          }
+        }
+        title={null}
+      >
+        <span>
+          Invoices
+        </span>
+      </a>
+      <span
+        className="breadcrumb"
+      >
+        10  Invoice   Contractor
+      </span>
+    </div>
+    <div
+      className="invoice-approve"
+    >
+      <button
+        className="approve-invoice-button button primary "
+        onClick={[Function]}
+        type="button"
+      >
+        Approve
+      </button>
+      <span
+        className="invoice-options-dropdown null"
+        onClick={[Function]}
+        role="presentation"
+      >
+        ...
+      </span>
+    </div>
+  </div>
+  <div
+    className="invoice-status approved"
+  >
+    approved for payment
+  </div>
+  <div
+    className="document-header-row-top"
+  >
+    <div
+      className="file-type-icon file-red medium"
+    >
+      pdf
+    </div>
+    <div
+      className="li-content"
+    >
+      <h3>
+        10  Invoice   Contractor
+      </h3>
+    </div>
+    <div
+      className="document-header-buttons"
+    >
+      <button
+        className="button secondary"
+        onClick={[MockFunction]}
+        type="button"
+      >
+        Edit
+      </button>
+    </div>
+  </div>
+  <div
+    className="document-view-block-content"
+  >
+    <div
+      className="document-header-row"
+    >
+      <div
+        className="li-before-content"
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-building fa-w-14 fa-lg "
+          data-icon="building"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 448 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M436 480h-20V24c0-13.255-10.745-24-24-24H56C42.745 0 32 10.745 32 24v456H12c-6.627 0-12 5.373-12 12v20h448v-20c0-6.627-5.373-12-12-12zM128 76c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12V76zm0 96c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12v-40zm52 148h-40c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12zm76 160h-64v-84c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v84zm64-172c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40zm0-96c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40zm0-96c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12V76c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </div>
+      <div
+        className="li-content"
+      >
+        <a
+          href="/building-profile?id=SP7110"
+          style={
+            Object {
+              "color": "#4A90E2",
+            }
+          }
+        >
+          SP285671 - 2 Cross Street, MOSMAN, 2088, NSW
+        </a>
+      </div>
+    </div>
+    <div
+      className="document-header-row"
+    >
+      <div
+        className="li-before-content"
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-dollar-sign fa-w-9 fa-lg "
+          data-icon="dollar-sign"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 288 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M209.2 233.4l-108-31.6C88.7 198.2 80 186.5 80 173.5c0-16.3 13.2-29.5 29.5-29.5h66.3c12.2 0 24.2 3.7 34.2 10.5 6.1 4.1 14.3 3.1 19.5-2l34.8-34c7.1-6.9 6.1-18.4-1.8-24.5C238 74.8 207.4 64.1 176 64V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48h-2.5C45.8 64-5.4 118.7.5 183.6c4.2 46.1 39.4 83.6 83.8 96.6l102.5 30c12.5 3.7 21.2 15.3 21.2 28.3 0 16.3-13.2 29.5-29.5 29.5h-66.3C100 368 88 364.3 78 357.5c-6.1-4.1-14.3-3.1-19.5 2l-34.8 34c-7.1 6.9-6.1 18.4 1.8 24.5 24.5 19.2 55.1 29.9 86.5 30v48c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-48.2c46.6-.9 90.3-28.6 105.7-72.7 21.5-61.6-14.6-124.8-72.5-141.7z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </div>
+      <div
+        className="li-content"
+      >
+        <strong>
+          Admin Fund: 
+        </strong>
+        <span>
+          $
+          -61,835.37
+        </span>
+          |  
+        <strong>
+          Capital Works Fund: 
+        </strong>
+        <span>
+          $
+          11,510.29
+        </span>
+          |  
+        <strong>
+          Balance: 
+        </strong>
+        <span
+          style={
+            Object {
+              "color": "red",
+            }
+          }
+        >
+          $
+          -50,325.08
+        </span>
+          
+      </div>
+    </div>
+    <div
+      className="document-header-row"
+    >
+      <div
+        className="li-before-content"
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-user fa-w-14 fa-lg "
+          data-icon="user"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 448 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </div>
+      <div
+        className="li-content"
+      >
+        George Vumbaca (undefined - undefined)
+      </div>
+    </div>
+  </div>
+</div>
+`;

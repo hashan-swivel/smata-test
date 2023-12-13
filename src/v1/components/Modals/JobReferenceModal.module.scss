@@ -1,0 +1,28 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.job-reference-modal-container {
+  .job-search-results {
+    max-height: 65vh;
+    overflow:auto;
+
+    .job-search-result {
+      padding: 10px;
+      margin: 15px 0 0;
+      border: 1px solid #e4e4e4;
+      background: #E7E7E7;
+      border-radius: 2px;
+
+      .job-title {
+        a {
+          color: $tertiary;
+          text-decoration: underline;
+          cursor: pointer;
+        }
+
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.contact-details-modal-container {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+
+  .contact-details-avatar-wrapper {
+    margin-left: 5px;
+  }
+
+  .contact-details-body-wrapper {
+    margin-left: 10px;
+
+    .contact-details-heading {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+
+      h4 {
+        .contact-details-role-text {
+          text-transform: capitalize;
+        }
+      }
+    }
+
+    .contact-details-subheading {
+      font-weight: bolder;
+    }
+
+    .contact-details-display-fields {
+      .contact-details-message-button {
+        font-size: 14px;
+        text-decoration: underline;
+        color: #797979;
+      }
+    }
+  }
+}
+
+.contact-details-back-button-container {
+  text-align: right;
+
+  .button {
+    margin-top: 10px;
+    padding: 5px 15px;
+  }
+}
+        

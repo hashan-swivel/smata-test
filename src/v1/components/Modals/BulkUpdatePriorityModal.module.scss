@@ -1,0 +1,12 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.bulk-update-priority {
+    .table {
+        .tbody > .tr.info > .td, .tbody > .tr.error > .td {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,104 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.rules-modal-container {
+  padding: 0 15px 10px 15px;
+
+  .rules-title {
+    margin-bottom: 20px;
+  }
+
+  .rules-subtitle {
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    margin: 10px 0;
+    border-bottom: 1px solid #EBEBEB;
+  }
+
+  .one-off-fields, .recurring-fields {
+    margin-bottom: 20px;
+  }
+
+  .rules-button-container {
+    display: flex;
+    justify-content: space-between;
+
+    .rules-close {
+      background: $white;
+      color: $off-black;
+      border: 1px solid $off-black;
+    }
+
+    .rules-close, .rules-done {
+      padding: 10px 60px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+  }
+
+  .disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  .alert-disabled-rule {
+    color: $error;
+  }
+
+  .building-rule-alert {
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 20px;
+    background: #FFE5E6;
+    border: 0.1px solid #FFE5E6;
+    border-radius: 4px;
+    color: $error;
+    font-size: 95%;
+  }
+
+  .document-view-block-title {
+    font-size: 18px;
+    padding: 5px;
+    color: $white;
+  }
+
+  .building-rule-history-list {
+    max-height: 215px;
+    overflow-y: scroll;
+    padding: 5px 10px;
+    border-radius: 0 0 5px 5px;
+  }
+
+  .building-rule-history-item {
+    display: flex;
+    font-size: 15px;
+    padding: 4px 0;
+
+    &:before {
+      content: '';
+      flex-shrink: 0;
+      flex-grow: 0;
+      width: 10px;
+      height: 10px;
+      background: $primary;
+      display: block;
+      border-radius: 50%;
+      margin: 8px 10px 0 0;
+    }
+
+    .building-rule-history-item-date {
+      min-width: 80px;
+      padding-right: 8px;
+    }
+  }
+}
+
+.rules-inactive {
+  display: none !important;
+}
+
+.rules-active {
+  margin-bottom: 5px;
+}

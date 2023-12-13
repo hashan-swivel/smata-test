@@ -1,0 +1,78 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+//.file-preview-container {
+//  width: 100%;
+//  margin-bottom: 0;
+//
+//  .react-transform-component {
+//    width: 100% !important;
+//    height: auto !important;
+//    margin: auto !important;
+//
+//    .react-transform-element {
+//      width: 100% !important;
+//      height: auto !important;
+//
+//      div {
+//        position: relative;
+//        width: 100%;
+//        height: auto !important;
+//      }
+//    }
+//  }
+//
+//  &.loaded {
+//    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+//  }
+//
+//  canvas {
+//    width: 100% !important;
+//    height: auto !important;
+//  }
+//
+//  @include media-down(large-tablet) {
+//    margin: 1rem 0;
+//  }
+//  .tools-zoom {
+//    padding: 10px 20px;
+//    width: 100%;
+//    background-color: #333333;
+//    color: #ffffff;
+//    margin: auto;
+//    text-align: right;
+//    display: grid;
+//    grid-template-columns: 1fr auto;
+//
+//    .icon {
+//      background: transparent;
+//      outline: none;
+//      border: 0;
+//      padding: 0;
+//      margin: 0 10px;
+//      vertical-align: bottom;
+//
+//      &:before {
+//        width: 20px;
+//        height: 20px;
+//      }
+//      &:first-of-type {
+//        margin-left: 0;
+//      }
+//
+//      &:last-of-type {
+//        margin-right: 0;
+//      }
+//    }
+//  }
+//
+//  .other-documents-download {
+//    padding: 5px 15px;
+//    margin-right: 15px;
+//
+//    &:hover {
+//      background-color: $primary-darker;
+//    }
+//  }
+//}

@@ -1,0 +1,95 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.other-embedded-view-wrapper {
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  canvas.react-pdf__Page__canvas {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+.other-embedded-view-header {
+  padding: 10px 20px;
+  width: 100%;
+  background-color: $secondary;
+  color: $off-white;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.other-embedded-view-content {
+  width: 100%;
+}
+
+.other-embedded-view-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 15px;
+
+  button.other-embedded-view-pagination--next,button.other-embedded-view-pagination--previous {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    color: $off-white;
+
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+}
+
+.other-embedded-view-tools {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+  .other-embedded-view-tools--rotate,
+  .other-embedded-view-tools--fullscreen,
+  .other-embedded-view-tools--zoom-in,
+  .other-embedded-view-tools--zoom-out {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    color: $off-white;
+
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+}
+
+.other-embedded-view-content--not-previewable-placeholder {
+  padding: 5px 10px;
+  border-radius: 3px;
+  background-color: $secondary;
+  color: $off-white;
+  box-shadow: 0 0 10px $secondary;
+}
+
+.react-transform-component {
+  width: unset !important;
+  height: unset !important;
+}
+
+.react-transform-element {
+  width: unset !important;
+  height: unset !important;
+}
+
+.other-embedded-view-content {
+  max-width:  100%;
+  max-height: 100%;
+  display: block;
+}

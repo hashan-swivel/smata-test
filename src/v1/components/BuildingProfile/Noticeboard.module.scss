@@ -1,0 +1,85 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.building-noticeboard-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include media-down(large-tablet) {
+    padding: 0;
+  }
+
+  @include media-down(small-tablet) {
+    border-bottom: 1px solid #e2e2e2;
+  }
+
+  .noticeboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    .noticeboard-tabs-container {
+      display: flex;
+
+      .mobile-view-header {
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 4px;
+        &.active{
+          background-color: #ddd;
+        }
+      }
+    }
+
+    .noticeboard-buttons-container {
+      display: flex;
+
+      .button:last-of-type {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .add-notice-button {
+    position: absolute;
+    top: 0;
+    left: 170px;
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    @include media-down(large-tablet) {
+      left: 110px;
+    }
+
+    &:before {
+      font-size: 18px;
+      position: absolute;
+      content: '+';
+      background-image: none !important;
+      transform: translateY(10%);
+      top: 0;
+    }
+  }
+
+  .noticeboard-grid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: 10px;
+
+    @include media-down(small-tablet) {
+      padding-bottom: 20px;
+    }
+
+    
+  }
+
+ 
+}

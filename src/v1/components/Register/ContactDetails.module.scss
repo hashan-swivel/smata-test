@@ -1,0 +1,25 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.contact-form {
+  @include media-down(small-mobile) {
+    font-size: 12px;
+  }
+
+  .information{
+    height: 50px;
+    background-color: $primary;
+    border-radius: 5px;
+    padding: 0 14px 0 14px;
+    color: $white;
+    margin: 22px 0 20px 0;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+  }
+
+  &.display-none {
+    display: none;
+  }
+}

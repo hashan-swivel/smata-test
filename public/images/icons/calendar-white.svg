@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>calendar</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M17.2222,4.77778 L16.3333,4.77778 L16.3333,6.55556 L13.6667,6.55556 L13.6667,4.77778 L8.33333,4.77778 L8.33333,6.55556 L5.66667,6.55556 L5.66667,4.77778 L4.77778,4.77778 C3.799111,4.77778 3,5.57778 3,6.55556 L3,17.2222 C3,18.2 3.799111,19 4.77778,19 L17.2222,19 C18.2,19 19,18.2 19,17.2222 L19,6.55556 C19,5.57778 18.2,4.77778 17.2222,4.77778 Z M17.2222,17.2222 L4.77778,17.2222 L4.77778,10.11111 L17.2222,10.11111 L17.2222,17.2222 Z M7.88889,3 L6.11111,3 L6.11111,6.11111 L7.88889,6.11111 L7.88889,3 Z M15.8889,3 L14.1111,3 L14.1111,6.11111 L15.8889,6.11111 L15.8889,3 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon/Basic/Calendar" transform="translate(-3.000000, -3.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="calendar" fill="#FFFFFF" fill-rule="nonzero" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

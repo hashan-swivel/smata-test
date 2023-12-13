@@ -1,0 +1,279 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+@media print {
+  .messages-content {
+    .avatar-photo {
+      width: 30px !important;
+      height: 30px !important;
+    }
+
+    .chatroom-info-header button,
+    .message-box-wrapper,
+    .messaging-middle-container .mobile-messaging-navbar,
+    .messaging-sidebar-container,
+    .footer {
+      display: none !important;
+    }
+
+    .messages-container-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .messaging-middle-container {
+      display: flex !important;
+      -ms-flex-order: 2;
+      order: 2;
+    }
+
+    .right-sidebar-container {
+      border-left: 0px !important;
+      border-bottom: 2px solid #dbdbdb;
+      display: flex !important;
+      -ms-flex-order: 1;
+      order: 1;
+    }
+
+    .message-group-container {
+      .message-group-date-wrapper:before {
+        border: none;
+      }
+      .print-message-name {
+        display: block;
+        padding: 10px 20px;
+        text-align: right;
+      }
+      .message-item-meta-container {
+        .message-item-meta {
+          .message-item-actions {
+            display: none;
+          }
+        }
+      }
+      .message-group {
+        .message-item .message-body .message-container {
+          border: 1px solid #dbdbdb
+        }
+      }
+    }
+  }
+}
+
+.dropzone-modal {
+  .modal-content {
+    padding: 15px;
+    display: flex;
+    overflow-x: hidden;
+
+    .modal-cross-close {
+      display: flex;
+      flex-direction: row-reverse;
+
+      &:before {
+        height: 18px;
+        width: 18px;
+        background-color: $disabled;
+        border: 6px solid $disabled;
+        border-radius: 50%;
+      }
+    }
+
+    .file-upload-container {
+      padding: 0 15px 15px 15px;
+
+      p {
+        font-size: 14px;
+      }
+
+      .title {
+        font-size: 24px;
+        font-weight: bold;
+        text-transform: capitalize;
+      }
+
+      .component-background {
+        //width: 420px;
+        padding: 10px;
+        background-color: #f8fafb;
+        margin-bottom: 15px;
+        border-radius: 5px;
+
+        @include media-down(large-mobile) {
+          width: 100%;
+        }
+      }
+
+      .button-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 19px;
+
+        button {
+          width: 165px;
+          height: 42px;
+
+          @include media-down(large-mobile) {
+            width: 130px;
+          }
+        }
+      }
+
+      .upload-file-modal {
+        .uploaded-grid {
+          display: grid;
+          grid-template-columns: 55px auto 30px;
+          width: 100%;
+        }
+
+        .file-upload-bottom {
+          grid-row: 2/3;
+          grid-column: 2/4;
+          border-top: 1px solid #dadada;
+
+          .document-details {
+            margin: 5px 0 0 2px;
+          }
+
+          .suggest-file-name {
+            &:hover {
+              text-decoration: none;
+            }
+            .suggest-link {
+              color: rgb(0, 129, 255);
+              &:hover {
+                text-decoration: underline;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+
+        .additional-fields {
+          display: flex;
+          align-items: flex-end;
+          padding: 0 0 5px 8px;
+
+          .icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+
+            &:before {
+              width: 15px;
+              height: 15px;
+            }
+          }
+        }
+
+        .no-sp-field {
+          grid-column: 2 / 3;
+
+          &.inactive {
+            display: none;
+          }
+        }
+      }
+
+      .file-inputs {
+        .hidden-field {
+          display: none;
+        }
+      }
+
+      .additional-inputs,
+      .global-inputs {
+        grid-column: 2/4;
+
+        .field {
+          display: inline-block;
+
+          .field-title {
+            grid-column: 1 / 3;
+          }
+        }
+
+        .hidden-field {
+          display: none;
+        }
+
+        &.group-checkboxes {
+          margin-top: 5px;
+
+          .checkboxes-field {
+            &.inactive {
+              .options {
+                .option {
+                  label {
+                    &:before {
+                      background-color: #f2f2f2;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .everyone-checkbox,
+        .tenant-checkbox {
+          grid-column: 1 / 2;
+        }
+
+        .agent-checkbox,
+        .owner-checkbox {
+          // grid-column: 2 / 3;
+        }
+
+        &.add-to-inputs {
+          margin-top: 10px;
+        }
+      }
+
+      @include media-down(large-mobile) {
+        width: 100%;
+      }
+    }
+
+    .global-fields {
+      .label {
+        margin: 10px 0;
+        cursor: pointer;
+      }
+
+      .icon-after {
+        &:after {
+          width: 9px;
+          height: 9px;
+          margin-left: 9px;
+        }
+      }
+    }
+
+    .global-fields-text {
+      &.active {
+        color: $error;
+        font-weight: bold;
+      }
+
+      &.inactive {
+        display: none;
+      }
+    }
+  }
+
+  .react-select__menu {
+    z-index: 1001;
+    max-height: 145px;
+
+    .react-select__menu-list {
+      max-height: 140px;
+    }
+  }
+}

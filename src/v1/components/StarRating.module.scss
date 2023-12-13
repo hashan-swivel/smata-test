@@ -1,0 +1,21 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.Stars {
+  --percent: calc(var(--rating) / 5 * 100%);
+  --star-size: 23px;
+  --star-color: #797979;
+  --star-background: #fc0;
+
+  display: inline-block;
+  font-size: var(--star-size);
+  font-family: Times; // make sure ★ appears correctly
+
+  &::before {
+    content: '★★★★★';
+    background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

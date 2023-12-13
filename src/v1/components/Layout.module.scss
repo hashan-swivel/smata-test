@@ -1,0 +1,65 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+/*=============================================>>>>>
+= App Styles =
+===============================================>>>>>*/
+$header-height: 70px;
+$footer-height: 56px;
+
+.body {
+  background: $black;
+  color: $textcolor;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 40px;
+  width: 100%;
+  max-width: 1400px;
+
+  @include media-down(tablet) {
+    padding: 0 10px !important;
+  }
+
+  &.document-view-wrapper,
+  &.document-list-wrapper,
+  &.strata-data-logs-list-wrapper {
+    max-width: 100%;
+  }
+}
+
+.main-content {
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: $off-white;
+  overflow-y: auto;
+
+  &.messages-content .container {
+    height: calc(100vh - #{$header-height});
+  }
+}
+
+.mobile-down {
+  @include media-up(mobile) {
+    display: none;
+  }
+}
+
+.tablet-down {
+  @include media-up(tablet) {
+    display: none;
+  }
+}
+
+.button {
+  outline: none;
+  cursor: pointer;
+}
+
+.h-100 {
+  height: 100%;
+}

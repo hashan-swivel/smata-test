@@ -1,0 +1,67 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.c-modal__header {
+  position: relative;
+  margin-bottom: 1rem;
+  border-radius: .2rem;
+}
+
+.c-modal__title {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 1rem 1.5rem;
+  background: $black;
+  color: $white;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+}
+
+.c-modal__header-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  border: 1px solid transparent;
+  font-size: 2.3rem;
+  padding: .3rem 1.5rem 0 0;
+  color: $white;
+
+  &:hover {
+    color: darken($white, 40%);
+  }
+}
+
+.c-modal__body {
+  padding: 0 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.c-modal__footer {
+  text-align: right;
+  margin-bottom: 1rem;
+  padding: 0 1.5rem;
+}
+
+.c-modal__container {
+  transform: translate(-50%, -50%);
+  border-radius: .2rem;
+  -webkit-overflow-scrolling: touch;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  max-width: 900px;
+  min-width: 500px;
+  width: auto;
+  border: none !important;
+
+  @include media-down(large-tablet) {
+    min-width: auto;
+    width: 90vw;
+  }
+}
+
+.c-modal__container--lg {
+  max-width: 90vw;
+}

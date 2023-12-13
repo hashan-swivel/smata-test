@@ -1,0 +1,12 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.building-profile-header {
+  background: linear-gradient(0deg, $off-white 15%, $black 15%);
+
+  @include media-down(small-tablet) {
+    background: $black;
+    margin-bottom: 20px;
+  }
+}

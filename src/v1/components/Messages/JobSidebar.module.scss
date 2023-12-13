@@ -1,0 +1,58 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.job-content {
+  .sidebar-job-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+
+    .sidebar-job-id {
+      border: 1px solid black;
+      border-radius: 8px;
+      padding: 0 15px;
+      font-size: 12px;
+    }
+  }
+
+  .sidebar-job-description {
+    position: relative;
+    line-height: 1.45em;
+    max-height: calc(1.4rem * 3);
+    overflow: hidden;
+    font-size: 15px;
+    margin-top: 8px;
+  }
+
+  .preview-image-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    height: 100px;
+    width: 100%;
+    padding-top: 10px;
+    @include media-down(large-tablet) {
+      height: 150px;
+      display: flex;
+    }
+
+    .preview-image {
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      margin: auto;
+    }
+
+    .no-images-message {
+      grid-column: span 3;
+    }
+  }
+  .google-maps-container {
+    margin-top: 10px;
+  }
+
+  .google-map {
+    margin-bottom: 20px;
+  }
+}

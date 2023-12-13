@@ -1,0 +1,32 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.upload-modal-container {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  left: 0;
+
+  .upload-modal-container-inner {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    height: max-content;
+    padding: 25px 30px;
+    margin: auto;
+    min-width: 400px;
+    width: 550px;
+    min-height: 120px;
+    border-radius: 6px;
+  }
+}

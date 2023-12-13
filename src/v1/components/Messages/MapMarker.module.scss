@@ -1,0 +1,26 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+//.marker {
+//  width: 30px;
+//  height: 30px;
+//  border-radius: 50% 50% 50% 0;
+//  background: #000000;
+//  position: absolute;
+//  transform: rotate(-45deg);
+//  left: 50%;
+//  top: 50%;
+//  margin: -20px 0 0 -20px;
+//
+//  &:after {
+//    content: "";
+//    width: 15px;
+//    height: 15px;
+//    margin: 5px 0 0 5px;
+//    border: 2px solid $white;
+//    background: #000000;
+//    position: absolute;
+//    border-radius: 50%;
+//  }
+//}

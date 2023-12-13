@@ -1,0 +1,146 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.upcoming-work-single-item-container {
+  margin: 0 5px;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  background-color: $white;
+  height: 100%;
+
+  .work-description {
+    margin-top: auto;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    max-width: 100%;
+    line-height: 1.4em;
+    margin-right: 20px;
+    height: 45px;
+
+    @include media-down(small-tablet) {
+      font-size: 15px;
+    }
+  }
+
+  .work-contractor {
+    color: #939393;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    max-width: 100%;
+
+    @include media-down(small-tablet) {
+      font-size: 14px;
+    }
+  }
+
+  .upcoming-work {
+    margin-bottom: 8px;
+  }
+
+  .avatar-title-container {
+    display: flex;
+    align-items: flex-start;
+
+    .subtitle {
+      margin-left: 15px;
+      cursor: pointer;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      max-width: 100%;
+      min-height: 38px;
+      margin-top: 10px;
+    }
+
+    .avatar {
+      margin-right: -5px;
+    }
+  }
+
+  .date-status-container {
+    //display: flex;
+    margin-bottom: 20px;
+
+    @include media-down(small-desktop) {
+      font-size: 13px;
+    }
+
+    @include media-down(tablet) {
+      font-size: 12px;
+    }
+
+    .date {
+      padding: 5px 15px;
+      border: 1px solid $secondary;
+      border-radius: 10px;
+      text-align: center;
+      width: auto;
+      margin-right: 5px;
+      font-size: 15px;
+    }
+
+    .contractor-and-status {
+      font-size: 1rem;
+      white-space: normal;
+      text-align: start;
+
+      &:nth-child(n + 1) {
+        margin-top: 0.2rem;
+      }
+    }
+
+    .contractor-and-status-show-more {
+      @include body-font();
+
+      margin-top: 0.3rex;
+      background: none;
+      border: none;
+    }
+
+    .status {
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      padding: 5px 15px;
+      border-radius: 8px;
+      text-align: center;
+      width: auto;
+      background-color: $primary;
+      color: $white;
+      line-height: 1;
+      justify-content: center;
+
+      &.underreview {
+        background-color: $off-black;
+      }
+
+      &.date-btn {
+        font-size: 15px;
+        background-color: transparent;
+        border: 1px solid #353535;
+        margin: 0 5px 0 0;
+        color: #353535;
+      }
+      &.jtc-status {
+        margin: 0 5px 0 0;
+      }
+    }
+  }
+
+  .date-status-container.upcoming-work {
+    .avatar {
+      .avatar-photo {
+        margin: 0 5px 0 0;
+      }
+    }
+  }
+}

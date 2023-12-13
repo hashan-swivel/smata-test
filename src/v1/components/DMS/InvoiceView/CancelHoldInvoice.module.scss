@@ -1,0 +1,126 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+// FIXME: remove `display: flex;` in `Modal.scss` and test against all other modals as well
+.modal.approve {
+  .modal-content {
+    display: block;
+    overflow-x: hidden;
+  }
+}
+
+.cancel-hold-invoice-container {
+  padding: 0 15px;
+
+  .hidden {
+    display: none;
+  }
+
+  .cancel-hold-invoice-title {
+    margin-bottom: 20px;
+  }
+
+  div.avatar {
+    margin-right: 5px;
+  }
+
+  .cancel-hold-invoice-buttons-container {
+    width: 100%;
+    margin: 10px 0 10px 0;
+    display: flex;
+    justify-content: space-between;
+
+    .go-back-button {
+      width: 49%;
+      border: 1px solid $off-black;
+      background: $white;
+      color: $textcolor;
+
+      &:hover {
+        background-color: $black;
+        color: $white;
+      }
+    }
+
+    .cancel-invoice-button {
+      background-color: $error;
+      border: 1px solid $error;
+      width: 49%;
+
+      &:hover {
+        background-color: $black;
+        color: $white;
+      }
+    }
+
+    .on-hold-button,
+    .approve-next-button {
+      background-color: $primary;
+      border: 1px solid $primary;
+      width: 49%;
+
+      &:hover {
+        background-color: $black;
+        color: $white;
+      }
+    }
+
+    .approve-next-button {
+      width: 100%;
+    }
+
+    .approve-go-to-next-button {
+      background-color: $primary-darker;
+      border: 1px solid $primary-darker;
+      width: 100%;
+
+      &:hover {
+        background-color: $black;
+        color: $white;
+      }
+    }
+
+    .override-approve-button {
+      width: 100%;
+      background-color: $danger;
+      border: $danger;
+
+      &:hover {
+        background-color: $black;
+        color: $white;
+      }
+    }
+
+    .override-goto-next-button {
+      background-color: $danger-darker;
+      border: 1px solid $danger-darker;
+      width: 100%;
+
+      &:hover {
+        background-color: $black;
+        color: $white;
+      }
+    }
+
+    .override-goto-next-strata-invoice-button {
+      background-color: darken($danger-darker, 15%);
+      border: 1px solid darken($danger-darker, 15%);
+      width: 100%;
+
+      &:hover {
+        background-color: $black;
+        color: $white;
+      }
+    }
+
+  }
+
+  .approve-warning-text {
+    margin-bottom: 5px;
+  }
+
+  .cancel-notification-danger {
+    color: $danger;
+  }
+}

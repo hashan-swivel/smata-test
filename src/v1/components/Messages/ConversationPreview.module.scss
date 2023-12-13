@@ -1,0 +1,168 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.conversation-preview-container {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border-bottom: 2px solid darken($off-white, 10%);
+  font-size: 15px;
+  cursor: pointer;
+
+  &.active {
+    background-color: $off-white;
+    border-radius: 4px;
+
+    .users-address-container {
+      .message-preview-grouping {
+        .message-preview-address,.message-preview-file {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .message-preview-title {
+    font-size: 1rem;
+    margin: 5px 0;
+    font-weight: 700;
+    white-space: initial;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+
+    strong {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    em {
+      display: inline-block;
+      vertical-align: middle;
+      color: rgb(233, 30, 99);
+      margin: 0 0 0 20px;
+      font-weight: normal;
+    }
+
+    .unread-message-counter {
+      font-weight: normal;
+      font-size: 0.8rem;
+      margin-right: 5px;
+      background-color: $danger;
+      color: $white;
+      border-radius: 8px;
+      padding: .1rem .5rem;
+    }
+  }
+
+  &.unread {
+    .message-preview-body {
+      font-weight: bold;
+    }
+  }
+
+  .inactive {
+
+  }
+
+  .users-address-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 5px;
+
+    .message-preview-grouping {
+      display: flex;
+      flex-direction: column;
+      max-width: 50%;
+
+      .message-preview-address,
+      .message-preview-file {
+        // @include ellipsis($width: 50%);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 13px;
+        opacity: 0.6;
+        &:before {
+          margin-right: 5px;
+          width: 13px;
+          height: 13px;
+        }
+      }
+
+      .message-preview-file {
+        &:before {
+          margin-bottom: -1px;
+        }
+      }
+
+    };
+
+  }
+
+
+  .message-preview {
+    @include ellipsis();
+    font-size: 14px;
+    color: rgba($textcolor, 0.8);
+    width: 100%;
+
+    .message-preview-body {
+      white-space: initial;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      .ban {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .message-preview-meta {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 8px;
+  }
+
+  .message-preview-created {
+    display: block;
+    font-size: 13px;
+    color: rgba($textcolor, 0.6);
+  }
+
+  .message-preview-delete {
+    display: block;
+    font-size: 13px;
+    background: $white;
+    color: rgba($textcolor, 0.8);
+    border: darken($off-white, 10%) 1px solid;
+    border-radius: 3px;
+    padding: 0 4px;
+    height: auto;
+    &:hover {
+      text-decoration: none;
+    }
+
+    &.icon {
+      &:before {
+        opacity: 0.6;
+        width: 9px;
+        height: 9px;
+        margin-right: 4px;
+      }
+    }
+    &.icon-cross-dark {
+      &:hover {
+        color: $error;
+        &:before {
+          opacity: 1;
+          background-image: url('../../../images/icons/cross-red.svg');
+        }
+      }
+    }
+  }
+}

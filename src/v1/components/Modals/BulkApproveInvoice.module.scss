@@ -1,0 +1,35 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.bulk-approve-invoice-modal-body {
+  table#table-bulk-approve-invoice {
+    tbody > tr.error > td, tbody > tr.duplicate > td {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    tbody > tr.duplicate-label > td {
+      border-top: none;
+      padding-top: 0;
+    }
+  }
+
+  .invoice-status {
+    text-transform: uppercase;
+  }
+
+  .buttons-container {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  th.date-col {
+    min-width: 90px;
+  }
+
+  th.invoice-price-col {
+    min-width: 80px;
+  }
+}

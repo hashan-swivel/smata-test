@@ -1,0 +1,177 @@
+/*=============================================>>>>>
+= Default typography styles =
+===============================================>>>>>*/
+
+.body {
+  @include body-font();
+  font-size: 16px;
+  font-weight: $font-weight-regular;
+  font-size-adjust: auto;
+  line-height: 1.6em;
+  text-align: left;
+  word-wrap: break-word;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 0 0 1px transparent;
+
+  @include media-down(mobile) {
+    font-size: 14px;
+  }
+}
+
+
+// --------------------------------------------------------------------------
+//   Headings
+// --------------------------------------------------------------------------
+
+.h1 + .h2,
+.h2 + .h3,
+.h3 + .h4,
+.h5 + .h6 {
+  margin-top: 0;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.h1 {
+  @include h1();
+}
+.h2 {
+  @include h2();
+}
+.h3 {
+  @include h3();
+}
+.h4 {
+  @include h4();
+}
+.h5 {
+  @include h5();
+}
+
+
+@include media-down(mobile) {
+
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    font-size: 0.9em;
+  }
+
+}
+
+// --------------------------------------------------------------------------
+//   Content Elements
+// --------------------------------------------------------------------------
+
+.a {
+  text-decoration: none;
+  color: $textcolor;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.p {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.strong {
+  font-weight: $font-weight-bold;
+}
+
+.figure {
+  margin: 0;
+  padding: 0;
+}
+
+.img {
+  max-width: 100%;
+  height: auto;
+}
+
+.hr {
+  display: block;
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid #eeeeee;
+}
+
+.blockquote {
+  margin: 0 0 20px;
+  font-family: cambria, georgia, times, serif;
+  font-style: italic;
+  .p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.table {
+  width: 100%;
+}
+
+.a.link {
+  text-decoration: underline;
+  color: $tertiary;
+}
+
+.term-and-condition {
+  font-size: 80%;
+  color: #888888;
+  line-height: 20px;
+}
+
+.text--danger {
+  color: $danger;
+}
+
+.text--primary {
+  color: $primary;
+}
+
+.text--link {
+  text-decoration: underline;
+  color: $tertiary;
+}
+
+.text--left {
+  text-align: left !important;
+}
+
+.text--center {
+  text-align: center !important;
+}
+
+.text--secondary {
+  color: #6c757d !important;
+}
+
+.em {
+  font-style: italic !important;
+}
+
+.hidden-small-desktop {
+  @include media-down(small-desktop) {
+    display: none;
+  }
+}
+
+.li.list-style-inside {
+  list-style: inside;
+}

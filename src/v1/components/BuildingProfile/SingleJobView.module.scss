@@ -1,0 +1,87 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.single-job-container {
+  &.inactive {
+    display: none;
+  }
+
+  &.active {
+
+    .single-job-address, .single-job-title {
+      margin-bottom: 15px;
+    }
+  
+    .single-job-reference {
+      margin-bottom: 5px;
+    }
+
+    .single-job-subtitle {
+      margin-top: 15px;
+      margin-bottom: 5px;
+    }
+
+    .job-images-container {
+      margin-bottom: 15px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-column-gap: 10px;
+
+      .job-image {
+        object-fit: cover;
+      }
+    }
+
+    .job-history-container {
+      margin-top: 20px;
+
+      .all-history-container {
+        padding: 10px;
+        border: 1px solid #cacaca;
+        border-radius: 5px;
+
+        .single-history-item-container {
+          &:first-of-type {
+            color: #0079ff;
+          }
+
+          &:last-of-type {
+            .history-date-description-container {
+              .work-green-line {
+                display: none;
+              }
+            }
+          }
+
+          .history-date-description-container {
+            .history-date-description {
+              padding: 5px;
+              display: flex;
+
+              .history-date {
+                font-weight: bold;
+              }
+
+              .history-description {
+                margin-left: 10px;
+              }
+            }
+
+            .work-green-line {
+              height: 15px;
+              width: 3px;
+              background-color: $off-black;
+              margin-left: 50px;
+            }
+          }
+        }
+      }
+    }
+
+    .job-history-back-button {
+      width: 100%;
+      margin-top: 15px;
+    }
+  }
+}

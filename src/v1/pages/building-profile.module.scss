@@ -1,0 +1,195 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.body {
+  background: $off-white;
+}
+
+.building-layout-wrapper {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.building-profile-dropdown {
+  background-color: $black;
+  padding: 0 30px 15px 30px;
+  display: flex;
+  align-items: center;
+
+  @include media-up(small-tablet) {
+    display: none;
+  }
+
+  @include media-down(large-mobile) {
+    justify-content: space-between;
+  }
+
+  @include media-down(large-mobile) {
+    padding: 0 20px 15px 20px;
+  }
+}
+
+.building-profile-wrapper {
+  line-height: 1em;
+
+  @include media-down(tablet) {
+    display: grid;
+  }
+
+  &.building-profile-wrapper_redesign {
+    @include media-down(tablet) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .building-profile-component {
+    margin: auto;
+    max-width: 1400px;
+    padding: 20px 30px;
+
+    .alice-carousel__wrapper {
+      padding: 5px 0;
+      border-radius: 5px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    &:last-child {
+      padding-bottom: 30px;
+    }
+
+    @include media-down(large-tablet) {
+      margin: unset;
+      padding: 15px 30px;
+    }
+
+    @include media-down(tablet) {
+      padding: 15px 10px;
+    }
+
+    @include media-down(tablet) {
+      padding: 15px 30px;
+    }
+
+    @include media-down(large-mobile) {
+      padding: 15px;
+    }
+  }
+
+  .building-title-margin {
+    margin: 0 0 30px 0;
+  }
+
+  .building-title-heading {
+    @include media-down(large-tablet) {
+      font-size: 18px;
+    }
+    @include media-down(tablet) {
+      font-size: 16px;
+    }
+    @include media-down(large-mobile) {
+      font-size: 18px;
+    }
+  }
+
+  .subtitle {
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+
+    @include media-down(tablet) {
+      font-size: 15px;
+    }
+  }
+
+  .building-profile-button {
+    line-height: 1em;
+    text-transform: none;
+
+    @include media-down(large-tablet) {
+      padding: 0 10px;
+      min-width: 100px;
+    }
+    @include media-down(tablet) {
+      padding: 0;
+    }
+    @include media-down(mobile) {
+      min-width: 95px;
+      margin-left: 10px;
+    }
+    @include media-down(small-mobile) {
+      font-size: 12px;
+      min-width: 85px;
+    }
+  }
+
+  .right-grid-popular-documents {
+    padding: 20px 30px 20px 20px;
+
+    @include media-down(large-tablet) {
+      padding: 10px 15px 10px 10px;
+    }
+
+    @include media-down(tablet) {
+      padding: 15px 30px;
+    }
+
+    @include media-down(large-mobile) {
+      padding: 15px;
+    }
+  }
+
+  .left-grid-work-history {
+    padding: 20px 20px 20px 30px;
+
+    @include media-down(large-tablet) {
+      padding: 10px 10px 10px 15px;
+    }
+
+    @include media-down(tablet) {
+      padding: 15px 30px;
+    }
+
+    @include media-down(large-mobile) {
+      padding: 15px;
+    }
+  }
+
+  .grid-wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    @include media-down(tablet) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .col-span-two {
+      grid-column: 1/ span 2;
+    }
+  }
+
+  .work-documents-container {
+    @include media-down(small-tablet) {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column-reverse;
+      padding-bottom: 0;
+    }
+  }
+
+  .industry-news-component {
+    background-color: #f2f2f2;
+  }
+
+  .mobile-view-header {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.building-profile-map {
+  height: 400px;
+}

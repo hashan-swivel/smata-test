@@ -1,0 +1,50 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.file-upload-top{
+  p{
+    grid-column: 2/3;
+    margin: 0 0 5px 0;
+  }
+
+  .uploaded-top-details{
+    justify-content: space-evenly;
+
+    .progress-bar{
+      position: relative;
+      height: 5px;
+      width: 100%;
+      border-radius: 2.5px;
+      background-color: $disabled;
+      grid-row: 2/3;
+      grid-column: 2/4;
+
+      .filler{
+        background: #0081FF;
+        height: 100%;
+        border-radius: inherit;
+        transition: width .2s ease-in;
+      }
+    }
+  }
+
+  button{
+    background: none;
+    border-style: none;
+    align-items: start;
+
+    &.delete-cross{
+      justify-self: end;
+
+      &:before{
+        height: 12px;
+        width: 12px;
+        background-color: #44566C;
+        border: 3px solid #44566C;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    }
+  }
+}

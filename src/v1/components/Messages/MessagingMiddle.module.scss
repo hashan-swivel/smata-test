@@ -1,0 +1,74 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.message-group-container-scrollbox {
+  overflow: auto;
+  visibility: hidden;
+  flex-grow: 1;
+}
+
+.message-group-container-scrollbox:hover,
+.message-group-container-scrollbox:active {
+  visibility: visible;
+}
+
+.message-group-container {
+  visibility: visible;
+
+  .message-group-date-wrapper {
+    text-align: center;
+    margin: 20px 15px;
+    position: relative;
+  }
+
+  .message-group-date {
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    > span {
+      background: $white;
+      padding: 0 20px;
+      font-size: 12px;
+      color: rgba($textcolor, 0.3);
+    }
+  }
+
+  .message-group-date-wrapper:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border-top: 0.1px solid rgba($textcolor, 0.1);
+    border-radius: 1px;
+    background: rgba($textcolor, 0.1);
+    width: 100%;
+    transform: translateY(-50%);
+  }
+
+  .message-history {
+    text-align: center;
+    color: rgba($textcolor, 0.3);
+    padding: 0 10px 15px 10px;
+    font-size: 12px;
+  }
+
+  .print-message-name {
+    display: none;
+  }
+}
+
+.message-box-wrapper {
+  position: relative;
+  border: 1px solid $border;
+  border-radius: 5px;
+  padding: 0 5px 5px 5px;
+  margin: 0 10px 10px 10px;
+
+  &:focus-within {
+    border: 1px solid $primary;
+  }
+}

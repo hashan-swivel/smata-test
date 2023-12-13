@@ -1,0 +1,59 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.crystal-report-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 10px;
+  align-items: center;
+  background: $off-white;
+  border: $off-white 1px solid;
+  padding: 10px 20px;
+  margin: 0 0 10px;
+}
+
+.crystal-report-item-col {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+
+  &.details {
+    grid-column: 1 / span 7;
+    display: grid;
+
+    .created-date {
+      grid-row: 1 / span 1;
+    }
+
+    .selected-date {
+      grid-row: 2 / span 1;
+    }
+
+    .sp-numbers {
+      grid-row: 3 / span 1;
+    }
+
+    .report-types {
+      grid-row: 4 / span 1;
+    }
+  }
+
+  &.download-btn {
+    grid-column: 8 / span 1;
+    justify-self: end;
+  }
+
+
+  &.status-in-progress {
+    color: $light-blue
+  }
+  &.status-error {
+    color: $error
+  }
+  &.status-completed {
+    color: #0bc50b;
+  }
+}
+

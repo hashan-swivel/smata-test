@@ -1,0 +1,39 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.duplicated-invoices-modal-container {
+  .table {
+    .tbody > .tr.error > .td {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+
+  .loading {
+    height: auto;
+  }
+
+  .invoice-status {
+    text-transform: uppercase;
+  }
+
+  .buttons-container {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .link {
+    color: $tertiary;
+  }
+
+  .th.date-col {
+    min-width: 90px;
+  }
+
+  .th.invoice-price-col {
+    min-width: 80px;
+  }
+}

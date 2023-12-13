@@ -1,0 +1,111 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.dms-search {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  .form {
+    width: 100%;
+    margin-right: 10px;
+
+    @include media-up(small-desktop) {
+      max-width: 530px;
+    }
+  }
+
+  button.button.button--search-tip {
+    background: #EAEDF0;
+    padding: 10.5px;
+    border-radius: 4px;
+    color: $off-black;
+
+    &:hover {
+      background: darken(#EAEDF0, 10%);
+    }
+  }
+
+  @include media-down(small-tablet) {
+    max-width: inherit;
+  }
+
+  @include media-up(small-desktop) {
+    max-width: 580px;
+  }
+}
+
+.dms-search-group {
+  width: 100%;
+  display: flex;
+}
+
+.dms-search-input {
+  width: 100%;
+  border-left: none;
+  border-radius: 0 4px 4px 0;
+  padding-left: 5px;
+}
+
+.dms-search-dropdown {
+  position: absolute;
+  top: 44px;
+  left: 0;
+  background: $white;
+  width: 100%;
+  z-index: 100;
+  max-width: 530px;
+}
+
+.dms-search-box {
+  display: flex;
+
+  .input {
+    &:focus {
+      transition: none;
+    }
+
+    &:not(:focus) {
+      transition: none;
+    }
+  }
+
+  .dms-search-tags {
+    background-color: $white;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px 0 0 4px;
+    margin-right: -5px;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+
+    .span {
+      display: flex;
+      align-items: center;
+      background-color: $primary;
+      color: $white;
+      border-radius: 4px;
+      padding: 5px;
+      height: 34px;
+      margin: 0 2px;
+      width: max-content;
+      text-transform: capitalize;
+
+      .icon-after {
+        padding-right: 0;
+        cursor: pointer;
+
+        &:after {
+          width: 10px;
+          height: 10px;
+        }
+      }
+    }
+  }
+
+  .active {
+    border-color: #4fcbb2;
+  }
+}

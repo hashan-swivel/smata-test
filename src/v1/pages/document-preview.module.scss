@@ -1,0 +1,71 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.body {
+  background: $off-white;
+}
+
+.document-view-wrapper {
+  display: grid;
+  grid-template-columns: 0 50% 50%;
+
+  @include media-down(large-tablet) {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+}
+
+.document-view-left {
+  padding: 30px 15px 30px 0;
+
+  @include media-down(large-tablet) {
+    padding: 30px 0;
+  }
+  @include media-down(tablet) {
+    padding: 10px 0;
+  }
+}
+
+.document-view-right {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0 30px 15px;
+
+  @include media-down(large-tablet) {
+    padding: 30px 0;
+  }
+  @include media-down(tablet) {
+    padding: 10px 0;
+  }
+
+  .document-right-container {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    min-width: 100%;
+    max-width: fit-content !important;
+    max-width: -moz-fit-content !important;
+  }
+}
+
+.document-view-block {
+  margin: 20px 0;
+
+  .document-view-block-title {
+    background: $secondary;
+    color: $white;
+    font-size: 15px;
+    margin: 0;
+    padding: 10px 15px;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .document-view-block-content {
+    background: $white;
+    padding: 15px;
+    border-radius: 0 0 5px 5px;
+    overflow: visible;
+  }
+}

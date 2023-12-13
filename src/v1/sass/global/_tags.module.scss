@@ -1,0 +1,49 @@
+$buttons: (
+  white: $white,
+  off-white: $off-white,
+  black: $black,
+  primary: $primary,
+  secondary: $secondary,
+  tertiary: $tertiary,
+  highlight: $highlight,
+  error: $error,
+);
+
+.tags {
+  display: flex;
+
+  .tag {
+    margin-right: 4px;
+  }
+}
+
+.tag {
+  background: $primary;
+  color: $white;
+  border: 1px solid $primary;
+  border-radius: 8px;
+  padding: 2px 10px;
+  font-size: 14px;
+  display: inline-block;
+  text-align: center;
+  line-height: 1.4em;
+  @each $name, $color in $buttons {
+    &.#{$name} {
+      background: $color;
+      border-color: $color;
+      @if $name == white {
+        color: $textcolor;
+      }
+      @if $name == off-white {
+        color: $textcolor;
+      }
+      &.outline {
+        background: transparent;
+        color: $color;
+        &:hover {
+          background: transparent;
+        }
+      }
+    }
+  }
+}

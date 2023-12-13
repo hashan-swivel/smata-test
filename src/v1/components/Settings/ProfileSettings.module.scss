@@ -1,0 +1,123 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.profile-settings-container {
+  flex: 1;
+  margin-bottom: 20px;
+
+  .user-profile {
+    background-color: $white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+
+    @include media-down(large-mobile) {
+      flex-direction: column;
+    }
+
+    .update-profile-button {
+      float: right;
+      margin-top: 15px;
+    }
+
+    .profile-avatar-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+      flex: 1;
+
+      .avatar {
+        .avatar-photo {
+          width: 200px;
+          height: 200px;
+        }
+      }
+
+      .profile-avatar-name {
+        margin: 15px 0 10px 0;
+        text-align: center;
+      }
+
+      .profile-avatar-role {
+        color: $tertiary;
+      }
+    }
+  }
+
+  .user-password {
+    background-color: $white;
+    padding: 20px;
+    border-radius: 10px;
+    display: grid;
+    grid-column-gap: 10px;
+
+    .update-profile-button {
+      float: right;
+      margin-top: 15px;
+    }
+
+    .profile-avatar-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+
+      .avatar {
+        .avatar-photo {
+          width: 200px;
+          height: 200px;
+        }
+      }
+
+      .profile-avatar-name {
+        margin: 15px 0 10px 0;
+        text-align: center;
+      }
+
+      .profile-avatar-role {
+        color: $tertiary;
+      }
+    }
+  }
+
+  .avatar-container {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: 0 auto;
+
+    .outer {
+      width: 100% !important;
+      height: 100% !important;
+      max-width: 200px !important;
+      max-height: 200px !important;
+      margin: auto;
+      border-radius: 100%;
+      position: relative;
+    }
+
+    button.inner {
+      background-color: transparent;
+      border: 0.5px solid #AAAAAA;
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    .avatar-photo {
+      margin: 0;
+    }
+
+    .icon:before {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

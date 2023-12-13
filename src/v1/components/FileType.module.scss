@@ -1,0 +1,47 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+$file-colours: (
+  'blue',
+  'green',
+  'red',
+  'yellow',
+);
+
+.file-type-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 31px;
+  height: 40px;
+  //background: url('../../images/icons/file-blue.svg') no-repeat center;
+  background-size: contain;
+  color: $white;
+  font-size: 10px;
+  text-transform: uppercase;
+
+  &.large {
+    width: 55px;
+    height: 70px;
+    font-size: 13px;
+  }
+
+  &.xlarge {
+    width: 79px;
+    height: 102px;
+    font-size: 18px;
+  }
+
+  &.small {
+    width: 20px;
+    height: 25px;
+    font-size: 7px;
+  }
+
+  @each $colour in $file-colours {
+    &.file-#{$colour} {
+      background-image: url('../images/icons/file-#{$colour}.svg');
+    }
+  }
+}

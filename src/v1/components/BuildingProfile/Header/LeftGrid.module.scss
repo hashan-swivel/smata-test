@@ -1,0 +1,189 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.header-building-image-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 20px 30px;
+  align-content: stretch;
+
+  @include media-down(large-tablet) {
+    padding: 20px 20px 20px 15px;
+  }
+
+  @include media-down(tablet) {
+    padding: 20px 10px;
+  }
+
+  @include media-down(small-tablet) {
+    padding: 5px 15px;
+    border-bottom: 1px solid $secondary;
+    margin-bottom: 20px;
+  }
+
+  .header-building-image {
+    height: 330px;
+
+    @include media-down(small-tablet) {
+      height: 270px;
+    }
+  }
+
+  .building-image-container {
+    position: relative;
+
+    .alice-carousel {
+      .alice-carousel__prev-btn {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 50px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .alice-carousel__prev-btn-wrapper {
+          .alice-carousel__prev-btn-item {
+            margin: 0;
+            height: 34px;
+            width: 34px;
+            padding-top: 8px;
+            padding-right: 6px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 100px;
+
+            span {
+              border: solid #52cbb2;
+              border-width: 0 4px 4px 0;
+              display: inline-block;
+              padding: 7px;
+              transform: rotate(135deg);
+              -webkit-transform: rotate(135deg);
+
+              &:after {
+                content: '';
+              }
+            }
+          }
+        }
+      }
+
+      .alice-carousel__next-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 50px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .alice-carousel__next-btn-wrapper {
+          .alice-carousel__next-btn-item {
+            margin: 0;
+            margin: 0;
+            height: 34px;
+            width: 34px;
+            padding-top: 8px;
+            padding-left: 6px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 100px;
+
+            span {
+              border: solid #52cbb2;
+              border-width: 0 4px 4px 0;
+              display: inline-block;
+              padding: 7px;
+              transform: rotate(-45deg);
+              -webkit-transform: rotate(-45deg);
+
+              &:after {
+                content: '';
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .make_main-image {
+      position: absolute;
+      right: 80px;
+      bottom: 12px;
+      padding: 5px 8px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 6px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 14px;
+      text-decoration: none;
+      transition: 0.2s;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #52cbb2;
+      }
+    }
+
+    .building-image {
+      width: 100%;
+      height: 330px;
+      object-fit: cover;
+
+      @include media-down(small-tablet) {
+        height: 270px;
+      }
+    }
+
+    .upload-building-image {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      width: 30px;
+      height: 30px;
+      background-color: $off-black;
+      border-radius: 50%;
+      border: 1px solid $white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:before {
+        height: 12px;
+        width: 12px;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .delete-building-image {
+      position: absolute;
+      bottom: 10px;
+      right: 45px;
+      width: 30px;
+      height: 30px;
+      background-color: $off-black;
+      border-radius: 50%;
+      border: 1px solid $white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:before {
+        height: 12px;
+        width: 12px;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

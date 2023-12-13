@@ -1,0 +1,205 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.dms-header {
+  padding-top: 20px;
+}
+
+.dms-header--top, .dms-header--bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.dms-header--bottom > .dms-search {
+  min-width: 350px;
+  max-width: 700px;
+}
+
+.dms-header-title-wrapper {
+  display: flex;
+  align-items: center;
+
+  h1 {
+    @include h3();
+  }
+
+  .tag {
+    margin: 0 0 0 10px;
+    display: flex;
+  }
+
+  .dms-header-title {
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 4px;
+    color: $off-black;
+
+    &.active {
+      background: #ddd;
+    }
+
+    &.inactive {
+      &:hover {
+        cursor: pointer;
+        background: #ddd;
+      }
+    }
+  }
+
+  .invoices {
+    position: relative;
+  }
+
+  .badge{
+    font-size: 50%;
+    position: absolute;
+    top: -10px;
+    right: -15px;
+    cursor: pointer;
+  }
+
+  .badge:hover{
+    opacity: .7;
+  }
+}
+
+.dms-filters, .dms-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  .button__grid-view, .button__list-view {
+    border: none;
+    padding: 11px 12px;
+    color: $off-black;
+    border-radius: 50%;
+
+    &.inactive {
+      background: #ddd;
+    }
+
+    &:hover {
+      background: $primary;
+      color: $off-black;
+    }
+
+    &.active {
+      background: $primary;
+      color: $off-black;
+    }
+  }
+
+  .button__grid-view{
+    margin-left: 10px;
+  }
+
+  .button__financial-report,
+  .button__levy-notice,
+  .button__add,
+  .button__added-date-filter,
+  .button__expanded-view {
+    background: $primary;
+    border: none;
+    padding: 11px 12px;
+    color: $off-black;
+    border-radius: 50%;
+
+    &.inactive {
+      background: #ddd;
+    }
+
+    &:hover,&.active {
+      background: $primary;
+      color: $off-black;
+    }
+  }
+
+  .button__levy-notice {
+    padding: 11px 15px;
+  }
+
+  .button__added-date-filter {
+    padding: 11px 14px;
+  }
+
+  .button__add {
+    color: black;
+    position: relative;
+  }
+
+  .add-button-wrapper {
+    position: relative;
+    margin-left: 10px;
+
+    .document-upload-dropdown {
+      position: absolute;
+      top: calc(100% + 10px);
+      right: 0px;
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      z-index: 999;
+      padding: 10px 0px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+
+      &::before {
+        content: '';
+        display: block;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 5px solid #ffffff;
+        position: absolute;
+        top: -29px;
+        right: 12px;
+        z-index: 99;
+        margin-top: 25px;
+      }
+
+      span {
+        padding: 10px 25px;
+        white-space: nowrap;
+        
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.dms-filters > .dms-filter {
+  margin: 10px 0 0 10px;
+}
+
+.dms-filters > .dms-filter:first-child {
+  margin-left: 0;
+}
+
+.dms-actions > button, .dms-actions > .button-group, .dms-actions > .dms-date-filter {
+  margin-left: 10px;
+
+  @include media-down(large-tablet) {
+    margin-top: 10px;
+  }
+}
+
+.dms-actions > *:first-child {
+  margin-left: 0;
+}
+
+.dms-date-filter {
+  position: relative;
+  display: flex;
+}
+
+.dms-date-filter__input {
+  min-width: 230px;
+  padding-left: 30px;
+}

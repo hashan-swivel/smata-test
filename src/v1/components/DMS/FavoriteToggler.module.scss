@@ -1,0 +1,24 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+button.favorite {
+  display: flex;
+  align-items: center;
+  margin-right: .1rem;
+  background-color: white;
+  border: #f4f4f4 1px solid;
+  border-radius: 50%;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+
+  span {
+    display: flex;
+  }
+
+  .icon:before {
+    width: 13px;
+    height: 13px;
+  }
+}

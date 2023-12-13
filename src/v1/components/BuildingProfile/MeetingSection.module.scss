@@ -1,0 +1,57 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.meeting-section {
+  margin: auto;
+  max-width: 1400px;
+  padding: 20px 30px;
+
+  @include media-down(small-tablet){
+    padding: 15px;
+  }
+}
+
+.meetings-state-switches {
+  margin-bottom: .5rem;
+}
+
+.meeting-state__upcoming,.meeting-state__completed {
+  background-color: transparent;
+  border-color: transparent;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 150%;
+  line-height: 1.2em;
+  color: $textcolor-disabled;
+  border-radius: .5rem;
+  padding: 1rem .7rem;
+
+  &:hover {
+    background-color: #ddd;
+    color: #363535;
+  }
+
+  &.active {
+    cursor: default;
+    color: #363535;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  @include media-down(large-tablet) {
+    font-size: 18px;
+  }
+  @include media-down(tablet) {
+    font-size: 16px;
+  }
+  @include media-down(large-mobile) {
+    font-size: 18px;
+  }
+}
+
+.meeting-state__upcoming {
+  padding-left: 0;
+}

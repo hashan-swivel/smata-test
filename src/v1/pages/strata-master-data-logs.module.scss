@@ -1,0 +1,101 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.strata-data-logs-list-body {
+  .main-content {
+    display: flex;
+  }
+  .loading {
+    flex: 1;
+  }
+  .heading-title {
+    text-align: center;
+    padding: 15px;
+  }
+
+  .strata-data-logs-list-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .strata-data-logs-list-items {
+    flex: 1;
+    overflow-y: auto;
+    button.primary {
+      margin: 5px;
+    }
+  }
+
+  .strata-data-logs-view-block-content {
+    background: $white;
+    padding: 15px;
+    border-radius: 0 0 5px 5px;
+    overflow: visible;
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+    margin-bottom: 1rem;
+  }
+
+  table.building-detail-item {
+    margin-bottom: unset;
+    thead {
+      th {
+        &.capitalize {
+          text-transform: capitalize;
+        }
+      }
+    }
+    tr {
+      &.bg-grey {
+        background-color: gainsboro;
+      }
+      &.bg-light-red {
+        background-color: #ffe8e7;
+      }
+    }
+    tbody {
+      td {
+        &.capitalize {
+          text-transform: capitalize;
+        }
+        button.primary {
+          margin: 5px;
+        }
+        .array-column {
+          white-space: pre;
+        }
+      }
+    }
+    .component-loading {
+      padding-top: unset;
+    }
+  }
+
+  .strata-data-logs-select-orgs {
+    min-width: 350px;
+    max-width: 700px;
+    margin-bottom: 15px;
+    display: flex;
+    .select-org-input {
+      width: 80%;
+      border-left: none;
+      border-radius: 0 4px 4px 0;
+      padding-right: 15px;
+      .css-1hwfws3 {
+        min-height: 50px;
+      }
+    }
+    .component-loading {
+      padding: unset;
+      width: auto;
+      .spinner {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+}
+

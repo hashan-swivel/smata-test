@@ -1,0 +1,46 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.otp-settings-container {
+  flex: 1;
+
+  .otp-settings {
+    display: flex;
+    width: 100%;
+    background-color: $white;
+    padding: 20px;
+    border-radius: 10px;
+
+    .otp-settings-form {
+      flex: 1;
+
+      .otp-settings-field-container {
+        display: flex;
+        border-radius: 5px;
+        border: 1px solid #eee;
+        padding: 15px 30px;
+        margin-bottom: 10px;
+
+        .field-heading {
+          border-bottom: 0;
+
+          .hint {
+            font-size: 90%;
+            color: #999;
+          }
+        }
+    
+        .field-toggle {
+          width: fit-content;
+          align-self: center;
+        }
+      }
+
+      .save-otp-settings-button {
+        margin-top: 10px;
+        float: right;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.redux-form-example {
+  margin: 30px 0;
+  .form {
+    background: $white;
+    max-width: 600px;
+    padding: 28px 40px 40px;
+    border-radius: 10px;
+  }
+}

@@ -1,0 +1,23 @@
+import { SVGProps } from 'react';
+
+const ReportIcon = ({ width = 20, height = 20, ...otherProps }: SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      width={width}
+      height={height}
+      viewBox='0 0 20 20'
+      fill='none'
+      {...otherProps}
+    >
+      <path
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M6.57303 0.994141H6.88544H14.1611H14.9111V1.74414V3.46923H17.4871H18.2371V4.21923V18.245V18.995H17.4871H5.01453H4.26453V18.245V15.6949H2.52002H1.77002V14.9449V6.14438V5.83547L1.98759 5.61617L6.353 1.21592L6.57303 0.994141ZM14.9111 14.9449V4.96923H16.7371V17.495H5.76453V15.6949H14.1611H14.9111V14.9449ZM6.13544 3.56502L4.32055 5.39438H6.13544V3.56502ZM3.27002 6.89438H6.88544H7.63544V6.14438V2.49414H13.4111V14.1949H3.27002V6.89438ZM6.59607 12.4697V9.99459H5.09607V12.4697H6.59607ZM9.09058 8.34457V12.4698H7.59058V8.34457H9.09058ZM11.5851 12.4697V5.86936H10.0851V12.4697H11.5851Z'
+        fill='currentColor'
+      />
+    </svg>
+  );
+};
+
+export default ReportIcon;

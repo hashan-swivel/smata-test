@@ -1,0 +1,77 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.building-main-contacts-container {
+  width: 100%;
+  padding: 10px;
+  color: $black;
+  background-color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: auto;
+
+  .main-contacts-loading {
+    width: 100%;
+  }
+
+  @include media-down(large-tablet) {
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  @include media-down(small-tablet) {
+    padding: 15px;
+  }
+
+  .building-main-contacts {
+    display: flex;
+
+    @include media-down(small-desktop) {
+      width: 100%;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+
+    .strata-manager, .building-manager, .building-team-user {
+      display: flex;
+      margin-right: 15px;
+
+      @include media-down(small-desktop) {
+        margin-right: 10px;
+      }
+
+      @include media-down(large-mobile) {
+        margin-right: 5px;
+      }
+    }
+
+    .main-contact {
+      margin-left: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 14px;
+      line-height: 1.4em;
+
+      @include media-down(small-desktop) {
+        margin-left: 5px;
+      }
+
+      @include media-down(large-tablet) {
+        font-size: 13px;
+      }
+
+      @include media-down(small-tablet) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .view-directory-button {
+    @include media-down(large-tablet) {
+      display: none;
+    }
+  }
+}

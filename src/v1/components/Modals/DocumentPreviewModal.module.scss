@@ -1,0 +1,97 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.dms-preview-modal {
+    
+  .react-pdf__Page__canvas {
+    margin: auto !important;
+    height: auto !important;
+    max-width: 595px;
+    width: 100% !important;
+  }
+      
+  .dms-preview-modal-content {
+    display: block;
+    align-items: center;
+    padding: 48px 24px 112px;
+  }
+
+  .error-msg {
+    color: white;
+    background: rgba(0, 0, 0, .8);
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+
+  .btn-icon {
+   margin-right: 8px;
+  }
+
+  .file-info {
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  .dms-preview-footer-action {
+    cursor: pointer;
+  }
+
+  .dms-preview-footer-action:not(:first-child) {
+    margin-left: 20px;
+  }
+
+  .react-transform-component {
+    overflow: unset !important;
+  }
+
+  .dms-preview-footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: rgba(0,0,0, 0.8);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    h4, a {
+      color: #fff;
+    }
+
+    h4 {
+      margin-bottom: 5px;
+    }
+    
+    a::selection {
+      background-color: transparent;
+    }
+  }
+}
+
+.dms-preview-footer-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 5px;
+
+  button.dms-preview-footer-pagination--next,button.dms-preview-footer-pagination--previous {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    color: $off-white;
+
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+
+  span {
+    color: $off-white;
+  }
+}

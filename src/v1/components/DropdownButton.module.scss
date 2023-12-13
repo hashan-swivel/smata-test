@@ -1,0 +1,46 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.dropdown-button-container {
+  position: relative;
+  width: 100%;
+
+  .more-button {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    color: #fff;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    padding: 0px 10px;
+  }
+
+  .dropdown-container {
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 0px;
+    z-index: 9;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 10px 0px;
+
+    button {
+      background-color: #fff;
+      border: none;
+      padding: 10px 25px;
+      white-space: nowrap;
+      text-align: left;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

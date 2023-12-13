@@ -1,0 +1,281 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.dms-list-view-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  grid-gap: 0px 10px;
+  align-items: center;
+  background: $white;
+  border: $white 1px solid;
+  padding: 10px;
+  margin: 0 0 10px;
+
+  @include media-down(large-mobile) {
+    padding: 5px;
+    grid-gap: 5px;
+  }
+
+  &.red-border {
+    border-color: lighten($error, 20%);
+  }
+
+  &.bg-light-red {
+    background-color: #ffe8e7;
+  }
+
+  &.unseen {
+    font-weight: bold;
+  }
+
+  .invoice-dms-status-container {
+    display: flex;
+    flex-direction: column;
+
+    .invoice-status {
+      // border: 1px solid $black;
+      color: $off-black;
+      text-align: center;
+      // border-radius: 5px;
+      text-transform: uppercase;
+      font-size: 11px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      // justify-content: center;
+
+      &.under-review {
+        border-color: $tertiary;
+        color: $tertiary;
+      }
+
+      &.processing,
+      &.extracting {
+        // background-color: rgba($warning, 0.1);
+        color: $warning;
+      }
+
+      &.strata-manager-approval,
+      .external-approval {
+        border-color: purple;
+        color: purple;
+      }
+
+      &.on-hold {
+        border-color: rgb(224, 115, 13);
+        color: rgb(224, 115, 13);
+      }
+
+      &.approved,
+      .paid {
+        border-color: $primary;
+        color: $primary;
+      }
+
+      &.cancelled,
+      &.failed,
+      &.processing-failed {
+        border-color: $error;
+        color: $error;
+      }
+
+      &.deleted {
+        border-color: $textcolor-disabled;
+        color: $textcolor-disabled;
+      }
+    }
+  }
+}
+
+.dms-list-view-item-col {
+  font-size: 14px;
+
+  &.file-selected {
+    display: flex;
+    align-items: center;
+
+    .file-type-icon {
+      margin: 0 0 0 15px;
+    }
+  }
+
+  &.doc-select-all {
+    grid-column: 1 / span 3;
+  }
+
+  &.doc-sp {
+    grid-column: 4 / span 3;
+
+    @include ellipsis();
+
+    a {
+      color: #353535;
+      text-decoration: none;
+    }
+  }
+
+  &.doc-type {
+    grid-column: 7 / span 3;
+    @include ellipsis();
+    text-transform: capitalize;
+  }
+
+  &.doc-name {
+    grid-column: 10 / span 9;
+    display: flex;
+    align-items: center;
+
+    .icon-warning-red {
+      margin: 0 10px;
+      line-height: 0;
+    }
+
+    a {
+      @include ellipsis();
+      color: #353535;
+      text-decoration: none;
+    }
+  }
+
+  &.doc-uploaded-date {
+    grid-column: 19 / span 3;
+    @include ellipsis();
+    display: flex;
+    align-items: center;
+  }
+
+  &.doc-actions,
+  &.invoice-actions {
+    grid-column: 22 / span 3;
+    display: flex;
+    justify-content: flex-end;
+    font-weight: normal;
+
+    .dropdown-wrapper .label {
+      padding: 0;
+      width: 24px;
+      height: 24px;
+      font-size: 20px;
+      padding-bottom: 11.5px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .a.schedule-date,
+    .a.job-link {
+      display: flex;
+      align-items: center;
+      margin-right: 0.1rem;
+      background-color: white;
+      border: #f4f4f4 1px solid;
+      border-radius: 50%;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+
+      span {
+        display: flex;
+      }
+
+      .icon:before {
+        width: 13px;
+        height: 13px;
+      }
+    }
+  }
+
+  // Invoice type
+  &.invoice-select-all {
+    grid-column: 1 / span 2;
+  }
+
+  &.invoice-sp {
+    grid-column: 3 / span 2;
+    @include ellipsis();
+    display: flex;
+    align-items: center;
+  }
+
+  &.invoice-contractor-name {
+    grid-column: 5 / span 4;
+    display: flex;
+    align-items: center;
+    @include ellipsis();
+
+    .stop-icon {
+      margin-left: 5px;
+    }
+  }
+
+  &.invoice-dms-status-container {
+    grid-column: 9 / span 3;
+    .invoice-status {
+      @include ellipsis();
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &.invoice-no {
+    grid-column: 12 / span 2;
+    @include ellipsis();
+    display: flex;
+    align-items: center;
+
+    .duplicate-icon {
+      cursor: pointer;
+      margin-right: 0.3rem;
+    }
+  }
+
+  &.invoice-amount {
+    grid-column: 14 / span 2;
+    @include ellipsis();
+    display: flex;
+    align-items: center;
+  }
+
+  &.invoice-added-date {
+    grid-column: 16 / span 2;
+    @include ellipsis();
+    display: flex;
+    align-items: center;
+  }
+
+  &.invoice-sort-currently-with {
+    grid-column: 18 / span 2;
+  }
+
+  &.invoice-currently-with {
+    display: flex;
+    justify-content: center;
+    grid-column: 18 / span 2;
+  }
+
+  &.time-with-item {
+    grid-column: 20 / span 2;
+  }
+
+  &.invoice-paid-date {
+    grid-column: 22 / span 2;
+  }
+
+  &.invoice-actions {
+    grid-column: 24 / span 2;
+  }
+
+  .dropdown {
+    width: 200px;
+    font-size: 14px;
+
+    .cancel-invoice > a,
+    .reject-invoice > a,
+    .delete-invoice > a {
+      color: $error;
+    }
+  }
+}

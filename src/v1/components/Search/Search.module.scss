@@ -1,0 +1,80 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.search {
+  width: 100%;
+  max-width: 565px;
+  position: relative;
+
+  @include media-down(small-tablet) {
+    max-width: inherit;
+  }
+}
+
+.search-input {
+  width: 100%;
+  border-left: none;
+  border-radius: 0 4px 4px 0;
+  padding-left: 5px;
+}
+
+.search-dropdown {
+  position: absolute;
+  top: 44px;
+  left: 0;
+  background: $white;
+  width: 100%;
+  z-index: 100;
+}
+
+.search-box {
+  display: flex;
+
+  .input {
+    &:focus {
+      transition: none;
+    }
+
+    &:not(:focus) {
+      transition: none;
+    }
+  }
+
+  .search-tags {
+    background-color: $white;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px 0 0 4px;
+    margin-right: -5px;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+
+    span {
+      display: flex;
+      align-items: center;
+      background-color: $primary;
+      color: $white;
+      border-radius: 4px;
+      padding: 5px;
+      height: 34px;
+      margin: 0 2px;
+      width: max-content;
+      text-transform: capitalize;
+
+      .icon-after {
+        padding-right: 0;
+        cursor: pointer;
+
+        &:after {
+          width: 10px;
+          height: 10px;
+        }
+      }
+    }
+  }
+
+  .active {
+    border-color: #4fcbb2;
+  }
+}

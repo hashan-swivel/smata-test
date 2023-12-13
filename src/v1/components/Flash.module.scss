@@ -1,0 +1,74 @@
+@import '@/sass/base/_typography.module.scss';
+@import '@/sass/base/_mixins.module.scss';
+@import '@/sass/base/__media.module.scss';
+@import '@/sass/base/__variables.module.scss';
+.flash {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: -60px;
+  left: 50%;
+  width: 100%;
+  min-width: 300px;
+  max-width: 680px;
+  transform: translateX(-50%);
+  transition: top 0.3s;
+  z-index: 9999999;
+  padding: .75rem 1.25rem;
+  border-radius: .25rem;
+  border: 1px solid transparent;
+}
+
+.flash--active {
+  top: 10px;
+  transition: top 0.6s 0.3s;
+}
+
+.flash--success {
+  color: #1d6455;
+  background-color: #c5eee6;
+  border-color: $primary;
+}
+
+.flash--error,.flash--danger {
+  color: #842029;
+  background-color: #f8d7da;
+  border-color: #f5c2c7;
+}
+
+.flash--warning {
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+}
+
+.flash--info {
+  color: #055160;
+  background-color: #cff4fc;
+  border-color: #b6effb;
+}
+
+.flash__text {
+  display: flex;
+  align-items: center;
+
+  &:before {
+    margin-right: 10px;
+  }
+}
+
+.flash__close {
+  background-color: transparent;
+  padding: 0;
+  border: 0;
+  opacity: .7;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.flash__icon {
+  margin-right: 10px;
+}

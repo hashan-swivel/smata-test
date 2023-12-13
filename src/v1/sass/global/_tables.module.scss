@@ -1,0 +1,174 @@
+.table {
+  border-collapse: collapse;
+}
+
+.table {
+  display: table;
+  box-sizing: border-box;
+  text-indent: initial;
+  border-spacing: 2px;
+  border-color: grey;
+}
+
+.thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+.tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+.th {
+  text-align: inherit;
+  display: table-cell;
+  vertical-align: inherit;
+  font-weight: bold;
+}
+
+.tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+.table .thead .th {
+  vertical-align: bottom;
+}
+
+.table td, .table th {
+  padding: .75rem;
+  vertical-align: top;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+}
+
+.table--bordered {
+  border: 1px solid #dee2e6;
+}
+
+.table--bordered thead td, .table--bordered thead th {
+  border-bottom-width: 2px;
+}
+
+.table--bordered td, .table--bordered th {
+  border: 1px solid #dee2e6;
+}
+
+.table--default {
+  background: #fff;
+  border-radius: 2px;
+  border-spacing: 2px;
+  border-color: grey;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+}
+
+.table--default > thead > tr > th, .table--default > tbody > tr > td {
+  display: table-cell;
+  font-weight: 400;
+  vertical-align: top;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  text-align: left;
+  padding: .5rem;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.table--default > thead > tr, .table--default > tbody > tr {
+  transition: all 0.3s ease;
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+.table--default > thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+  color: $off-black;
+}
+
+.table--default > tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+.table--default > thead > tr > th {
+  font-weight: bold;
+}
+
+.table--default > tbody > tr > td {
+  vertical-align: top;
+}
+
+.pagination__perPage {
+  display: flex;
+  font-size: 15px;
+  margin: 20px 0;
+}
+
+.pagination__perPageLabel{
+  display: inline-block;
+  font-weight: bold;
+}
+
+.pagination__perPageOption {
+  display: inline-block;
+  background: $disabled;
+  padding: 0 10px;
+  border-radius: 3px;
+  font-size: 14px;
+  margin: 0 5px;
+
+  &:hover {
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+.pagination__perPageOption--active {
+  background: $black;
+  color: $white;
+  cursor: default;
+}
+
+.pagination__pager {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.pagination__page {
+  display: inline-block;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.pagination__page--inactive {
+  color: $secondary;
+}
+
+.pagination__page--active {
+  color: $primary;
+}
+
+.pagination__page--bold {
+  font-weight: bold;
+}
+
+.pagination__ellipses, .pagination__total {
+  display: inline-block;
+  padding: 0 10px;
+  font-weight: bold;
+}
